@@ -1,0 +1,51 @@
+\section{Soliloquy Construction}
+
+Let $n \in \mathbb{P}$ : $|n| \approx 10$ bits.
+Let $\zeta$ be a primitive $n^{th}$ root of unity.
+
+We define $K$ to be the number field $\mathbb{Q}(\zeta)$ and $\mathcal(O)$ the ring of integers $\mathbb{Z} [\zeta ] \in K$. 
+
+Select $\alpha$ as a candidate for $p_{k} = \sum_{i=1}^{n} (\alpha_{i} \zeta_{i}) \in \mathcal{O}$, such that the coefficients $\alpha_{i}$ are taken from a discrete Gaussian distribution with a mean of zero.  
+i.e. The coefficients are relatively small. 
+
+Let $p$ be the norm of $\alpha$.
+
+The conditions under which an ordered pair, ($\alpha, p$) can be used as a set of Soliloquy keys $(pk, sk)$, are 
+\begin{itemize}
+\item $p \in \mathbb{P}$  and 
+\item $c=2^{\frac{p-1}{n}} \not\equiv 1(mod p)$.
+\item Then the quantity $c$ occurs with probability $1-\frac{1}{n}$. 
+\end{itemize}
+
+Using these conditions we guarantee that we have at least one principal ideal of the form  $\mathcal{P} = p \mathcal{O} + (\zeta-c) \mathcal{O}$, where a prime $p \equiv 1(mod n)$ is the principal ideal $p_{O}$  for a particularly chosen $c = 2^{\frac{(p-1)}{n}}$. 
+
+If $p_{O}$ is a product of prime ideals $\mathcal{P}_{i}$ with representation $\mathcal{P}_{i} = p\mathcal{O} + (\zeta-c_{i}) \mathcal{O}$ where the $c_{i}$ are the non-trivial $n_{th}$ of unity mod $p$. 
+
+Since the Galois group $Gal(K/\mathbb{Q})$ gives a permutation of prime ideals $\mathcal{P}_{i}$, then by a reordering of the coefficients $a_{i}$, (i.e. taking some Galois conjugate of $\alpha$), we can ensure $\alpha \mathcal{O} = \mathcal{P}$. 
+
+If $p \mathcal{O}$ is a product of prime ideals $\mathcal{P}_{i}$ with representation:  
+\[\mathcal{P}_{i} = p\mathcal{O} + (\zeta-c_{i}) \mathcal{O},\]
+ where the $c_{i}$ are the non-trivial $n^{th}$ roots of unity mod $p$. 
+  
+Since the Galois group $Gal(K/ \mathbb{Q})$, gives a permutation of prime ideals $\mathcal{P}_{i}$, by a reordering of the coefficients $a_{i}$, 
+
+(\textit{i.e. taking some Galois conjugate of} $\mathit{\alpha}$), we can ensure $ \alpha \mathcal{O} = \mathcal{P}$. 
+ 
+We have obtained a natural homomorphism  \[\psi : \mathcal{O} \rightarrow \mathcal{O}/ \mathcal{P} \simeq \mathbb{F}_{p}\] such that: 
+
+\[ \psi(\epsilon) = \psi \left( \sum_{i=1}^{n}e_{i}c^{i} \right) = \sum_{i=0}^{n} e_{i}c^{i}\mod{p}=z. \]
+  
+  
+  
+\subsection{Encryption \& Decryption}
+
+\subsubsection{Encryption}
+
+The encryption function is:
+\[\psi(\epsilon) = \psi \left( \sum_{i=1}^{n}e_{i}c^{i} \right) = \sum_{i=0}^{n} e_{i}c^{i}\mod{p}=z. \]
+
+The ephemeral\footnote{Emphemeral keys are key which are (usually)  generated each time the key generation process is executed. } key $\epsilon$ is sampled from the ring of integers $\mathcal{O}$, where the coefficients are sampled with a mean value of zero, the encrypted output $z$, is a positive rational number.
+
+\subsubsection{Decryption}
+
+To decrypt $\epsilon$, we use the closest integer function $\epsilon = \lceil z \rfloor \lceil z\alpha^{-1} \cdot \alpha \rfloor$, which gives $\epsilon$ small enough that $\lceil \epsilon \cdot \alpha^{-1}\rfloor = 0$. 

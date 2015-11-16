@@ -25,23 +25,20 @@
 \usepackage{amsmath}
 \usepackage{mathtools}
 \usepackage{amsthm}
-\usepackage{ntheorem}
+%\usepackage{ntheorem}
 \usepackage{amssymb}
 %\usepackage{tikz} % for graphs
 %\usepackage{tkz-berge}	% pretty graph theory
 %\usepackage{tikz-cd} % commutative diagrams
 %\usepackage{pgfplots}
 
-%	REFERENCES
-\usepackage{amsrefs}
+\usepackage{biblatex}
 
 %	INDEX
 \usepackage{index} 
 
 %	GLOSSARY
 \usepackage{gloss}
-%\usepackage{glossaries}
-%\usepackage[acronyms]{glossaries}
 
 %	HYPERREF
 \usepackage{hyperref}
@@ -102,10 +99,14 @@
 % Usage 
 %\begin{proof}[heading]
 
+% gloss
+\makegloss
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	BEGIN DOCUMENT
 \begin{document}
 
+
+\include{title}
 \tableofcontents
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -116,11 +117,32 @@
 % Section 2
 \include{SB1}
 \include{SB2}
-%\include{SB3}
+\include{SB3}
 % Section 3
-%\include{SC1}
-%\include{SC2}
-%\include{SC3}
+\include{SC1}
+\include{SC2}
+\include{SC3}
+% Section 4
+\include{SD1}
+\include{SD2}
+% Section 5
+\include{SE1}
+\include{SE2}
+\include{SE3}
+\include{SE4}
+% Section 6
+\include{SF1}
+\include{SF2}
+% Section 7
+\include{SG1}
+\include{SG2}
+\include{SG3}
+\include{SG4}
+\include{SG5}
+% Appendices
+\include{A1}
+\include{A2}
+\include{A3}
 
 
 
@@ -130,7 +152,10 @@
 
 \listoftodos
 
+thebibliography
 
+
+\printgloss{Glossary}{gls}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %	END DOCUMENT
 \end{document}

@@ -37,7 +37,7 @@ Additionally, since the method requires a secure channel as well as a shared sec
 
 
 
-\textbf{Formal Definitions for Symmetric-key Schemes}
+\subsubsection*{Formal Definitions for Symmetric-key Schemes}
 
 
 We define a symmetric-key scheme as follows:
@@ -62,7 +62,7 @@ The set of all possible ciphertexts (The ciphertext space) is denoted $\mathbf{\
 Let $\mathbf{Dec}$ be the decryption function which takes a ciphertext $c$ and key $k$ as input returning the corresponding message $m$.
 
 
-\textbf{Cryptosystem}
+\subsubsection*{Cryptosystem}
 
 
 Taking the above components together we have the following defintion of a symmetric-key cryptosystem using the traditionally chosen communicating parties \emph{Alice, Bob} and \emph{Eve (the eavesdropper)}:
@@ -75,17 +75,16 @@ The cryptosystem performs it's functions in the following order:
 First, Alice and Bob use $Gen$ to produce a shared secret key $k$.
 
 Whenever Bob wishes to send a message $m$ to Alice (or Alice to Bob) he inputs $(m,k)$ into $Enc$ to get a ciphertext of the message $c$.
-[c \coloneqq Enc_{k}(m)]
+\[c \coloneqq Enc_{k}(m)\]
 
 When Alice recives the ciphertext $c$ from Bob she inputs both $(c,k)$ into the decryption function and gets back the plaintext message $m$.
-[Dec_{k}(c) \coloneqq m.]
-\medskip
+\[Dec_{k}(c) \coloneqq m.\]
 
 To ensure the cryptosystem is correct, that is that it holds \textit{for every} message key pair $(k,m) : k \in \mathcal{K}$ and $m \in \mathcal{M}$ you must show that using the key on a ciphertext outputs the correct message. 
 
-[Dec_{k}(Enc_{k}(m)) = m]
+\[Dec_{k}(Enc_{k}(m)) = m\]
 
-[Dec_{k}(c) = m : Enc_{k}(m) = c]
+\[Dec_{k}(c) = m : Enc_{k}(m) = c\]
 
 
 

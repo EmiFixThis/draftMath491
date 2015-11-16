@@ -1,0 +1,40 @@
+\section{Quantum-safe Cryptography}
+
+In order to break a cryptographic system within a formal attack model from random instances you must solve the mathematical problem it relies on in the worst-case. A sufficiently large general purpose quantum computer can "easily" solve the three typical mathematical problems. The solutions can be found using Shorr’s algorithm.
+
+The first example of a quantum computer is the D-Wave quantum annealing computer. The D-Wave is advertised as 
+\textit{"The world's first commercially available quantum computer"}. 
+ 
+In 2013 Google, NASA Ames, and the Universities Space Research Association collaborated in a purchase of a subclass of the quantum annealing computer called an adiabatic quantum computer.  
+D-Wave systems are not general purpose quantum computers, and they don't try to be. 
+ 
+The D-Wave systems were created as special purpose quantum computers to solve the optimization problem of finding ground states of a classical Ising spin glass. 
+  
+The systems do not run most quantum algorithms. In particular, they do not run Shorr’s.
+Shorr’s requires a general purpose quantum computer. 
+ 
+A general purpose quantum computer is one that is capable of carrying out a set of standard quantum operations in any order it is told.
+\textit{There do not at this point in time exist any general purpose quantum computers.} 
+
+However, researchers working towards the development of such systems estimate success in the next decade; barring of course any unforeseen major barriers.  
+ 
+With these developments in mind it would be very poor risk management to delay development of quantum resistant cryptosystems and assume the longer time frame. It is quite plausible that not all developments are within public knowledge. 
+
+\subsection{Cryptosystems Currently Not Quantum-safe }
+\begin{itemize}	
+	\item The Integer Factorization Problem: 
+	\begin{itemize}	
+		\item RSA
+	\end{itemize}	
+	\item The Discrete Logarithm Problem:
+	\begin{itemize}	% 2
+		\item Diffie-Hellman Key Exchange
+		\item Digital Signature Algorithm
+		\item El Gamal (PGP)
+	\end{itemize}	
+	\item The Elliptic Curve Discrete Logarithm Problem:
+	\begin{itemize}	
+		\item Elliptic Curve Diffie-Hellman (ECDH)
+		\item Elliptic Curve Digital Signature Algorithm (ECDSA)
+	\end{itemize}	
+\end{itemize}	

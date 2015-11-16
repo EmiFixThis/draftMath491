@@ -1,0 +1,15 @@
+\section{Appendix C: Considerations When Choosing a Cryptosystem Replacement}
+
+There are two main considerations for choosing a particular replacement scheme. 
+
+The first is the environment which will be used to transmit the keys.  
+Not all environments are suited to the same types of schemes.
+
+Keys which will be transmitted over open network environments are better served by public key schemes. 
+These schemes also allow parties who have never met before or who have never shared keys to communicate securely over open networks such as the Internet.  
+Symmetric keys are the oldest type of encryption, characterized by private keys shared between parties which must be kept secret. 
+Symmetric key need for secrecy makes these schemes inherently ill-suited for open network environments. 
+
+The other consideration is a concept called Perfect Forward Secrecy.
+
+Schemes enabled with Perfect Forward Secrecy come with the assurance that if one message is compromised it will not lead to other messages also being compromised.

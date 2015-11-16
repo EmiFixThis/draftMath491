@@ -1,0 +1,31 @@
+\section{Fully Homomorphic Encryption} 
+
+In addition to their seeming quantum-safe features lattice-based schemes have the potential of providing Fully Homomorphic Encryption (FHE) to a given cryptosystem. 
+The problem which FHE solves is only slightly different than that of Public-key. We want to take our encrypted data, send it to an unauthorized party for processing, 
+and receive the same results we would get if we had never encrypted it.
+
+Cryptologists have spent a great deal of their time removing the natural homomorphisms from most schemes like RSA. While at the same time wishing for a doubly homomorphic system. 
+
+
+
+
+\subsection{Homomorphic Properties of Cryptographic Schemes} 
+
+Many classical public key cryptography methods have a homomorphic property, this property says if add two things together then their sum contains information about those two things.
+That is, they use successive operations of addition, multiplication, etc. to create ciphertext. 
+We call these schemes Partially Homomorphic since their operations cannot be performed simultaneously. 
+
+Unpadded RSA has this homomorphic property, if we take two RSA messages (ciphertext) which have been encrypted with unpadded RSA, and we multiply them together when we decrypted them we will find that this product contains the two original ciphertexts as subgroups, or embeds the ciphertexts. We say the ciphertexts are homomorphic to modular multiplication. 
+
+RSA and other classical schemes can only evaluate data over the operation they are defined to work on, such as multiplication or addition. 
+
+In cryptography we say a scheme that has this property is malleable and it is not always a good property for the scheme to have. Malleable means that an attacker can change an encrypted message, decrypt it and gain useful information. Lets say that you send 5\$ to Eve, then Eve can get enough information to put two zeros behind the five and suddenly you’ve just given Eve 500\$ instead. 
+
+FHE schemes are not limited to a single operation and can simultaneously compute any number of arbitrary operations. 
+
+All computers operate by using trillions upon trillions of boolean circuits. Boolean circuits are special cases of propositional formulas, truth tables, where the only output ever given by the system is either yes or no; in computer terms zero or one. 
+
+Boolean circuits have three basic functions from which the rest can be derived, they are AND, OR, and NOT. You can combine these two of functions to get a total set of sixteen different boolean functions. Engineers have been using these functions for ages, but cryptographers were stuck with one. 
+
+
+

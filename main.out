@@ -1,0 +1,35 @@
+\BOOKMARK [1][-]{section.1}{Introduction}{}% 1
+\BOOKMARK [1][-]{section.2}{Counterexamples Win Out}{}% 2
+\BOOKMARK [1][-]{section.3}{Introductory Cryptographic Terminology and Notation}{}% 3
+\BOOKMARK [2][-]{subsection.3.1}{Asymmetric \046 Symmetric Cryptography}{section.3}% 4
+\BOOKMARK [3][-]{subsubsection.3.1.1}{Symmetric-key Cryptography}{subsection.3.1}% 5
+\BOOKMARK [3][-]{subsubsection.3.1.2}{Asymmetric-key Cryptography}{subsection.3.1}% 6
+\BOOKMARK [2][-]{subsection.3.2}{Connecting Symmetric \046 Asymmetric Cryptography}{section.3}% 7
+\BOOKMARK [1][-]{section.4}{Semantic Security: Defining Security with Games}{}% 8
+\BOOKMARK [2][-]{subsection.4.1}{Goldwasser \046 Micali's: Mental Poker and Partial Information}{section.4}% 9
+\BOOKMARK [2][-]{subsection.4.2}{Weaknesses in the Assumptions of RSA}{section.4}% 10
+\BOOKMARK [1][-]{section.5}{Attack Models}{}% 11
+\BOOKMARK [2][-]{subsection.5.1}{Known Plaintext Attack \(KPA\)}{section.5}% 12
+\BOOKMARK [2][-]{subsection.5.2}{Chosen Plaintext Attacks \(CPA\)}{section.5}% 13
+\BOOKMARK [2][-]{subsection.5.3}{Chosen Ciphertext Attacks \(CCA\)}{section.5}% 14
+\BOOKMARK [1][-]{section.6}{Post-quantum cryptography}{}% 15
+\BOOKMARK [1][-]{section.7}{Quantum-safe Cryptography}{}% 16
+\BOOKMARK [2][-]{subsection.7.1}{Cryptosystems Currently Not Quantum-safe }{section.7}% 17
+\BOOKMARK [1][-]{section.8}{Learning with Parity \(LWP\)}{}% 18
+\BOOKMARK [2][-]{subsection.8.1}{Noisy Learning with Parity}{section.8}% 19
+\BOOKMARK [1][-]{section.9}{Learning with Errors \(LWE\)}{}% 20
+\BOOKMARK [2][-]{subsection.9.1}{Ring-LWE \(RLWE\)}{section.9}% 21
+\BOOKMARK [3][-]{subsubsection.9.1.1}{Peikerts Scheme}{subsection.9.1}% 22
+\BOOKMARK [1][-]{section.10}{Lattice-based Cryptography}{}% 23
+\BOOKMARK [1][-]{section.11}{Fully Homomorphic Encryption}{}% 24
+\BOOKMARK [2][-]{subsection.11.1}{Homomorphic Properties of Cryptographic Schemes}{section.11}% 25
+\BOOKMARK [1][-]{section.12}{Ideal Lattice-based Cryptography}{}% 26
+\BOOKMARK [2][-]{subsection.12.1}{Ideal Ring Lattice Cryptosystems}{section.12}% 27
+\BOOKMARK [2][-]{subsection.12.2}{Principal Ideal Lattice Insecurities}{section.12}% 28
+\BOOKMARK [1][-]{section.13}{Soliloquy Construction}{}% 29
+\BOOKMARK [2][-]{subsection.13.1}{Encryption \046 Decryption}{section.13}% 30
+\BOOKMARK [3][-]{subsubsection.13.1.1}{Encryption}{subsection.13.1}% 31
+\BOOKMARK [3][-]{subsubsection.13.1.2}{Decryption}{subsection.13.1}% 32
+\BOOKMARK [1][-]{section.14}{Appendix B: Base Security Objectives}{}% 33
+\BOOKMARK [2][-]{subsection.14.1}{Derived Security Objectives}{section.14}% 34
+\BOOKMARK [1][-]{section.15}{Appendix C: Considerations When Choosing a Cryptosystem Replacement}{}% 35

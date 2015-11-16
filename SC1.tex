@@ -50,5 +50,30 @@ Even if we assume that $f$ is a trapdoor function, that does not negate the poss
 \end{rem}
 
 
-The second weakness of RSA concerns the trapdoor function itself: 
+[\cite{Gol19820}] state the following concerning the use of trapdoors in general:
+\begin{quotation}
+    Covering ones face with a handkerchief certainly helps to hide personal identity. However:
+    \begin{enumerate}
+         \item It will not hide from me the identity of a special subset of people: my mother, my sister, close freinds.
+         \item I can gather a lot of information about people I cannot identify: their height, their hair color, and so on.
+    \end{enumerate}
+\end{quotation}
 
+These facts about the use of a handkerchief are exactly those you would find issue with in using any Public-key cryptosystem whose security relies on trapdoors. In fact, they are the same arguments which arise as problems in cases one and two. 
+
+Goldwasser and Micali suggest the following changes to the RSA and Rabin schemes:
+
+
+First, they declare the set of messages $\mathcal{M}$ should be sparse.
+
+\begin{cla}
+    If the set of messages $\mathcal{M}$ is sparse in $\mathbb{Z}_{N}^{*}$, then the ability to correctly recover even 1\% of all messages is not possible for a random polynomial time algorithm in the case of factoring.
+\end{cla}
+
+Where \emph{sparse} in this context means that when $x \in \mathbb{Z}_{N}^{*}$ is chosen randomly, we have a probability of any $x$ chosen being a message is for all intents and purposes zero. 
+
+
+Second, they define the notion of secure for any Public-key cryptosystem in a way that disallows the use of trapdoor functions:
+
+\begin{defn}
+    Let $\mathcal{P}$ 

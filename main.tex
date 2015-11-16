@@ -1,0 +1,136 @@
+\documentclass[11pt]{article}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	PACKAGES
+
+
+\usepackage{geometry} 	% for margin notes
+\usepackage{graphicx} % for including images
+\usepackage{snotez} 
+% Usage
+% \sidenote[mark]{note}
+\usepackage[colorinlistoftodos]{todonotes}
+\usepackage{fancyhdr}
+\setlength{\headheight}{80pt} % Increase the size of the header to accommodate meta-information
+\pagestyle{fancy}\fancyhf{} % Use the custom header specified below
+\renewcommand{\headrulewidth}{0pt} % Remove the default horizontal rule under the header
+\setlength{\parindent}{0cm} % Remove paragraph indentation
+\newcommand{\tab}{\hspace*{2em}} % Defines a new command for some horizontal space
+
+\usepackage{xcolor} % for color
+\usepackage{tabularx} %tables
+
+%	MATH PACKAGES
+\usepackage{amsmath}
+\usepackage{mathtools}
+\usepackage{amsthm}
+\usepackage{ntheorem}
+\usepackage{amssymb}
+%\usepackage{tikz} % for graphs
+%\usepackage{tkz-berge}	% pretty graph theory
+%\usepackage{tikz-cd} % commutative diagrams
+%\usepackage{pgfplots}
+
+%	REFERENCES
+\usepackage{amsrefs}
+
+%	INDEX
+\usepackage{index} 
+
+%	GLOSSARY
+\usepackage{gloss}
+%\usepackage{glossaries}
+%\usepackage[acronyms]{glossaries}
+
+%	HYPERREF
+\usepackage{hyperref}
+\hypersetup{hidelinks,backref=true,pagebackref=true,hyperindex=true,colorlinks=false,breaklinks=true,bookmarks=true,bookmarksopen=false}
+\usepackage{url}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	ENVS
+
+% Theorem Envs
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{lem}[thm]{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}{Proposition}
+\newtheorem{con}{Conjecture}
+\newtheorem{crit}{Criterion}
+\newtheorem{ass}{Assertion}
+
+% Definition Envs
+\theoremstyle{definition}
+\newtheorem{defn}{Definition}
+\newtheorem{exmp}{Example}
+\newtheorem{xca}[exmp]{Exersize}
+\newtheorem{cond}{Condition}
+\newtheorem{prob}{Problem}
+\newtheorem{algo}{Algorithm}
+\newtheorem{que}{Question}
+\newtheorem{axi}{Axiom}
+\newtheorem{prot}{Property}
+\newtheorem{asu}{Assumption}
+\newtheorem{hyp}{Hypothesis}
+
+% Remark Envs
+\theoremstyle{remark}
+\newtheorem{rem}{Remark}
+\newtheorem{nt}{Note}
+\newtheorem{nota}{Notation}
+\newtheorem{cla}{Claim}
+\newtheorem{summ}{Summary}
+\newtheorem{ack}{Acknowledgement}
+\newtheorem{case}{Case}
+\newtheorem{cln}{Conclusion}
+
+% Proof Env
+\makeatletter
+\renewenvironment{proof}[1][\proofname]{\par
+    \pushQED{\qed}%
+    \normalfont \topsep\p@\@plus6\p@\relax
+    \trivlist
+    \item\relax
+        {\itshape
+    #1\@addpunct{.}}\hspace\labelsep\ignorespaces}{%
+    \popQED\endtrivlist\@endpefalse
+}
+\makeatother
+  
+% Usage 
+%\begin{proof}[heading]
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	BEGIN DOCUMENT
+\begin{document}
+
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+% Introduction
+\include{SA1}
+\include{SA2}
+% Section 2
+\include{SB1}
+\include{SB2}
+\include{SB3}
+% Section 3
+\include{SC1}
+\include{SC2}
+\include{SC3}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% List of ToDos
+
+\listoftodos
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	END DOCUMENT
+\end{document}

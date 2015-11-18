@@ -1,0 +1,23 @@
+# Outline
+
+1: Intro
+2: Counterexamples
+3: Basic Crypto
+4: Security
+5: Attack Models
+6: PQ-Crypto
+    + Q-safe crypto
+7: Lattice Problems
+    + NLP
+    + LWE
+    + SIS
+8: LBC
+    + SIS
+    + LWE
+    + RLWE
+    + IRLWE
+        + Soliloquy
+9: Applications
+    + FHE
+    + Obfuscation
+10: Appendices

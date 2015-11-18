@@ -1,22 +1,17 @@
 \section{Lattice-based Cryptography (LBC)} 
 
-Lattice-based Cryptosystems are a subclass of Post-quantum cryptosystems. All modern cryptosystems require a minimum level of \emph{average-case complexity} (or intractability); meaning the mathematical problem(s) serving as a basis for the system are chosen at random from an appropriate probability distribution, and with an assurance that any problem drawn from this distribution will almost probably \todo[inline]{check if you used almost-probably in the correct sense.} hard to solve. 
+Lattice-based Cryptosystems are a subclass of Post-quantum cryptosystems. All modern cryptosystems require a minimum level of \emph{average-case complexity} (or \emph{intractability}); meaning the mathematical problem(s) serving as a basis for the system are chosen at random from an appropriate probability distribution, with an assurance that any problem drawn from this distribution will almost probably \todo[inline]{check if you used almost-probably in the correct sense.} be hard to solve. 
 
-Traditionally, we have three types of complexity problems: \textit{best-case, average-case}, and \textit{worst-case} complexity. 
 
-\begin{itemize}
-    \item \textbf{Best-case:} Refers to the set of problems which (uninterestingly enough) have perfect conditions, and outcomes.
-    \item \textbf{Average-case:} We can interpret the average-case in common mathematical terms as the quantifier \emph{for some}. As in, for some random instance (or some, small, negligible set of random instances) the problem may not be hard to solve. In the contrapositive sense, A problem is hard to solve (intractible)\footnote{Tractible: (first known usage 1502) meaning \textit{easily managed}. In contrast, intractible (earliest usage 1545) means difficult to manage. In mathematics, refers to a problem which easily lends itself to solution. Computer Science: A problem which can be solved algorithmically, usually in polynomial time. \todo[inline]{How do you cite Wikitionary?}}, \todo[inline]{for most? For almost all? The usual "for All" doesn't fit here.} random instances of the problem.
-    \item \textbf{Worst-case:} Can be interpreted (in the case of lattices) similarly, as the quantifier \emph{for any}, or \emph{for all}. The connections between the average and worst-case hardness of lattice problems, are elements of primary interest in lattice-based cryptography. We discuss these connections in detail below.
-\end{itemize}
+
+
+ 
 
 \subsection{Average-case to Worst-case Connectivity}
 
+In modern (hearafter refered to as classical) cryptography the problems which serve as mathematical basis for the construction are efficiently \footnote{Efficient in this context means algorithmically solvable in polynomial time.} solved by quantum algorithms. The first proof of the solvability of the problems for RSA and the Diffie-Hellman protocols was given by Peter Shor in 1997 [\cite{Sho19970}] 
 
-The definition of worst-case as discussed in lattice-based cryptography is quite different than the traditional form used in the field of Theoretical Computer Science (TCS). For most applications in cryptography the worst-case was not very useful at all, the worst-case simply meant that there existed hard to solve instances of a problem which applied under the worst-case solvability constraints. In fact, many problems which would seem to be hard to solve in the worst-case instances, would ironically turn out to be easily solvable on the average. This would often be true in cryptography, where secret keys would produce instances with added structure [Pei2015].  
-
-
-For the most part, applied cryptographers did not need to worry too much about worst-case instances of problems. One might run a quick analysis of these instances to see if any vulnerabilities could be spotted, and perhaps eliminated, but overall they were ignored (sometimes mocked, particularly by applied students poking at theoreticians). 
+The definition of worst-case as discussed in lattice-based cryptography is quite different than the traditional form used in the field of Theoretical Computer Science (TCS). For most applications in cryptography the worst-case was not very useful at all, the worst-case simply meant that there existed hard to solve instances of a problem which applied under the worst-case solvability constraints. In fact, many problems which would seem to be hard to solve in the worst-case instances, would ironically turn out to be easily solvable on the average. This would often be true in cryptography, where secret keys would produce instances with added structure [\cite{Pei20151}].  
 
 
-security proof for a lattice based scheme not only claims security against attacks from classical (current) computer systems, but quantum as well. The drawback is these not as efficient (yet) as other more well known schemes. However, lattice-based schemes claim a unique benefit that other post-quantum schemes do not. 
+For the most part, applied cryptographers did not need to worry too much about worst-case instances of problems. One might run a quick analysis of these instances to see if any vulnerabilities could be spotted, and perhaps eliminated, but overall they were ignored (sometimes mocked, particularly by applied students poking at theoretical ones). 

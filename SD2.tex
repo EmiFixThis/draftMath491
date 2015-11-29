@@ -1,12 +1,12 @@
 \section{Quantum-safe Cryptography}
 
-In order to break a cryptographic system within a formal attack model from random instances you must solve the mathematical problem it relies on in the worst-case. A sufficiently large general purpose quantum computer can "easily" solve the three typical mathematical problems. The solutions can be found using Shorr’s algorithm.
+In order to break a cryptographic system within a formal attack model from random instances you must solve the mathematical problem it relies on in the worst-case. A sufficiently large general purpose quantum computer can "easily" solve the three typical mathematical problems. The solutions can be found using Shorr’s algorithm.\todo[inline]{You need to define "easy", "sufficient" and Shor's Algo.}
 
 The first example of a quantum computer is the D-Wave quantum annealing computer. The D-Wave is advertised as 
 \textit{"The world's first commercially available quantum computer"}. 
  
 In 2013 Google, NASA Ames, and the Universities Space Research Association collaborated in a purchase of a subclass of the quantum annealing computer called an adiabatic quantum computer.  
-D-Wave systems are not general purpose quantum computers, and they don't try to be. 
+D-Wave systems are not general purpose quantum computers, and they don't try to be.\todo[inline]{Define general purpose quantum computer here or earlier?}
  
 The D-Wave systems were created as special purpose quantum computers to solve the optimization problem of finding ground states of a classical Ising spin glass. 
   
@@ -21,6 +21,9 @@ However, researchers working towards the development of such systems estimate su
 With these developments in mind it would be very poor risk management to delay development of quantum resistant cryptosystems and assume the longer time frame. It is quite plausible that not all developments are within public knowledge. 
 
 \subsection{Cryptosystems Currently Not Quantum-safe }
+
+\todo[inline]{This section needs to be introduced a bit more. You went straight from explaining DWave to which math problems don't hold up to Shor's with little transition or explanation.}
+
 \begin{itemize}	
 	\item The Integer Factorization Problem: 
 	\begin{itemize}	

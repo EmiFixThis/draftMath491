@@ -1,6 +1,126 @@
 \defcounter {refsection}{0}\relax 
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ INSERT PKC DIAGRAM}{5}{section*.2}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ I'm not sure "asymmetric-key/symmetric-key" need to be hyphenated?}{3}{section*.2}
 \defcounter {refsection}{0}\relax 
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Is this supposed to be here, I think this sentence is supposed to be in asym.}{5}{section*.3}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ I might remove this footnote - there are secure channels (e.g. whispering in your ear).}{3}{section*.3}
 \defcounter {refsection}{0}\relax 
-\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Insert equations as above}{7}{section*.6}
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Rework the first sentence of this paragraph; it reads a bit awkwardly}{3}{section*.4}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Do you think there needs to be stuff about classial/quantum/post-quantum crypto in the intro? Or at least a bit on lattice crypto? The TOC looks like the paper is mostly devoted to that, but the intro doesn't mention it.}{3}{section*.5}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Merge these two first sentences (second one is a fragment)}{4}{section*.6}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Define/glossary link to ideal lattice crypto? idk what ideal means yet}{4}{section*.7}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Probably should remove the "life in general" bit}{4}{section*.8}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ You might consider either dramatically shortening this section or, perhaps, even removing it entirely. I really, really like it from a narrative standpoint (it's really refreshing to read a paper told sorta like a story), however you should consider your audience. If this will, at least initially, primarily be read by math professors, then you probably don't need 3-4 paragraphs arguing for the efficacy of counterexamples ;) }{5}{section*.9}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ A bit of notation/naming clash here. You've been talking about "asymmetric-key" crypto so far, and now you've switched to "public key crypto". I'd generally try to stick to one or the other.}{6}{section*.10}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Do you need to formally define "one-way function" here?}{6}{section*.11}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Maybe give the function a name, i.e. "we assume there exists a one-way function F..."}{6}{section*.12}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Maybe fomally define what it means to "invert"?}{6}{section*.13}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Again, maybe give the function a name.}{6}{section*.14}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ INSERT PKC DIAGRAM}{6}{section*.15}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Consider making a section specifically devoted to defining classical crypto}{6}{section*.16}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Redo this sentence. I get what you're saying, but it's worded in a sorta confusing way.}{7}{section*.17}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Is this supposed to be here, I think this sentence is supposed to be in asym.}{7}{section*.18}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ I don't think you mean to have this sentence here.}{7}{section*.19}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Is the key generation function called the keyspace? That's how this sentence reads, but I thought the keyspace was the set of all possible keys.}{7}{section*.21}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ When you define a function (at least in CS, maybe math is different?) we usually write it as Enc(m, k), or Enc(m, k) -> c, to visually show the inputs/outputs.}{7}{section*.22}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Rework this definition I think. The ciphertext space is all possible outputs of Enc, right?}{7}{section*.23}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Take a sentence to introduce Alice and Bob, i.e. "Suppose Alice and Bob want to exchange a message. First, Alice and Bob use Gen..."}{8}{section*.25}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Doesn't Enc take K as an argument? Or does the literature generally use a subscript for K?}{8}{section*.26}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ There's a technical word for this I think...but I can't think of the name off the top of my head.}{8}{section*.27}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Is the key actually the function itself? I thought, generally speaking, private keys were e.g. a modulus or a particular input to the function, not the function itself (the function itself is public, right?)}{9}{section*.28}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Insert equations as above}{9}{section*.29}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ This section either needs to be elaborated on with an example or removed.}{9}{section*.30}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ I'm not sure a section about weaknesses of RSA belongs here? It seems lke you should focus on defining/explaining semantic security?}{10}{section*.31}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ You need to somehow introduce or define RSA, even if it's just a single sentence. You probably shouldn't just jump in to talking about weaknesses in RSA when you haven't mentioned it yet before now.}{10}{section*.32}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ This example maybe needs to be elaborated a bit more?}{11}{section*.33}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Typeset SIS}{12}{section*.34}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Finish LWP}{12}{section*.35}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Typeset LWE}{12}{section*.36}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Typeset RLWE}{12}{section*.37}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Introduce the "Attack Models" section before jumping right in to models.}{13}{section*.38}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ What are these? Are these the assumptions? Maybe put them in a table or something, or at least label them as assumptions.}{13}{section*.39}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Cite these?}{13}{section*.40}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ This section needs WAY more info. What is a quantum computer? Why does it matter for crypto? etc.}{16}{section*.45}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ You need to define "easy", "sufficient" and Shor's Algo.}{17}{section*.46}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Define general purpose quantum computer here or earlier?}{17}{section*.47}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ This section needs to be introduced a bit more. You went straight from explaining DWave to which math problems don't hold up to Shor's with little transition or explanation.}{17}{section*.48}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Introduce this section? How did we get from math problems broken by Shor's to LWP?}{19}{section*.49}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ What is this problem?}{19}{section*.50}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ This section doesn't really describe LWE? I still don't really know what it is.}{19}{section*.51}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ IMPORTANT: you should probs talk about the post-quantum schemes a bit more (e.g. there's code-based, lattie-based, hash-based, etc. These should be introduced in an overview section or something before diving in to lattice-based.}{21}{section*.52}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ check if you used almost-probably in the correct sense.}{21}{section*.53}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ just say classical}{21}{section*.54}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Does this need to be explored/elaborated on? This seems really important.}{21}{section*.55}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Not sure what you're trying to say here about worst-case, but the way this is written it's wrong}{21}{section*.56}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ What does "added structure" mean here?}{21}{section*.57}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ No real transition into this section?}{22}{section*.58}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Perhaps this section should appear much earlier in the paper? You use some of these definitions before this section actually defines them.}{22}{section*.59}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ How do you cite Wikitionary?}{22}{section*.60}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ What???!? You haven't really talked about how or why lattice crypto is supposedly quantum safe. You def need a section on that.}{23}{section*.61}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ It's not clear to me why there is a discussion of boolean circuits/logic here? I think you can safely remove this; I'm just confused by it.}{23}{section*.62}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ What are these? You haven't talked about additional app areas at all yet.}{25}{section*.63}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ what is ideal ring structure? You haven't mentioned it yet}{25}{section*.64}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Do you need to explain/explore this?}{25}{section*.66}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ What is a cyclotomic field? You haven't introduced it}{25}{section*.67}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Introduce this section? It's not clear to me where this stuff is coming from and there's no real transition.}{27}{section*.68}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ The math is really pretty though :) }{27}{section*.69}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ Conclusion? What's happening here I'm so lost? I assume this is just where you left off the last time you comitted and have more on your machine?}{28}{section*.70}
+\defcounter {refsection}{0}\relax 
+\contentsline {todo}{\color@fb@x {}{black}{}{orange}{\leavevmode {\color {orange}o}}\ MOVE ME}{29}{section*.71}

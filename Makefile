@@ -1,14 +1,17 @@
 TEX=$(wildcard *.tex)
-PDF=thesis.pdf
+PDF=main
 BUILD=pdflatex
 GLS=makeglossaries
-SRC=thesis
+SRC=main
 
 all: ${PDF}
 
 ${PDF}: ${TEX}
 	${BUILD} ${SRC}
-	${GLS} thesis
+	${GLS} main
+	${BUILD} ${SRC}
+	${BUILD} ${SRC}
+	${BUILD} ${SRC}
 	${BUILD} ${SRC}
 	${BUILD} ${SRC}
 

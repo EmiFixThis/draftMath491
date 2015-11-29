@@ -1,6 +1,6 @@
 \section{Fully Homomorphic Encryption} 
 
-In addition to their seeming quantum-safe features lattice-based schemes have the potential of providing Fully Homomorphic Encryption (FHE) to a given cryptosystem. 
+In addition to their seeming quantum-safe features \todo[inline]{What???!? You haven't really talked about how or why lattice crypto is supposedly quantum safe. You def need a section on that.}lattice-based schemes have the potential of providing Fully Homomorphic Encryption (FHE) to a given cryptosystem. 
 The problem which FHE solves is only slightly different than that of Public-key. We want to take our encrypted data, send it to an unauthorized party for processing, 
 and receive the same results we would get if we had never encrypted it.
 
@@ -22,6 +22,8 @@ RSA and other classical schemes can only evaluate data over the operation they a
 In cryptography we say a scheme that has this property is malleable and it is not always a good property for the scheme to have. Malleable means that an attacker can change an encrypted message, decrypt it and gain useful information. Lets say that you send 5\$ to Eve, then Eve can get enough information to put two zeros behind the five and suddenly you’ve just given Eve 500\$ instead. 
 
 FHE schemes are not limited to a single operation and can simultaneously compute any number of arbitrary operations. 
+
+\todo[inline]{It's not clear to me why there is a discussion of boolean circuits/logic here? I think you can safely remove this; I'm just confused by it.}
 
 All computers operate by using trillions upon trillions of boolean circuits. Boolean circuits are special cases of propositional formulas, truth tables, where the only output ever given by the system is either yes or no; in computer terms zero or one. 
 

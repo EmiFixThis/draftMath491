@@ -1,18 +1,18 @@
 \section{Ideal Lattice-based Cryptography}
-The additional application areas and ease of implementation due to ideal ring structure is convenient, the choice of ring its self is as important as the problem it is based upon. An advantage of Ring-LWE is its much smaller set of keys; the ring allows for more efficient and larger ranges in application areas. 
+The additional application areas \todo[inline]{What are these? You haven't talked about additional app areas at all yet.}and ease of implementation due to ideal ring structure \todo[inline]{what is ideal ring structure? You haven't mentioned it yet}}is convenient, the choice of ring its self is as important as the problem it is based upon. An advantage of Ring-LWE is its much smaller set of keys; the ring allows for more efficient and larger ranges in application areas. 
 
 Ideal Ring-LWE allows an even broader range of applications and efficiency than RLWE due to the additional structure provided by the principal ideals.
 
 \subsection{Ideal Ring Lattice Cryptosystems}
 
 \subsubsection*{Gentry's Scheme}
-[\cite{Gen20090}] Was the first successful construction fully homomorphic encryption scheme In 2009 Craig Gentry constructed the first cryptographic system capable of evaluating arbitrary operations. The scheme was constructed over a principal ideal lattice [\cite{Gen20090}] uses a bootstrap method to prove its security.
+[\cite{Gen20090}] Was the first successful construction fully homomorphic encryption scheme In 2009 Craig Gentry constructed the first cryptographic system capable of evaluating arbitrary operations. The scheme was constructed over a principal ideal lattice [\cite{Gen20090}] uses a bootstrap method to prove its security.\todo[inline]{Do you need to explain/explore this?}
 
 
 
 \subsection{Principal Ideal Lattice Insecurities}
 
-The cyclotomic field of characteristic two infers so many convenient structures it is often chosen without consideration to any other ring []\cite{Cra20150}].
+The cyclotomic field \todo[inline]{What is a cyclotomic field? You haven't introduced it}of characteristic two infers so many convenient structures it is often chosen without consideration to any other ring []\cite{Cra20150}].
 
 In 2010 at the Public Key Cryptography Conference two researchers Smart and Veracauteren [SV10] introduced another ideal lattice scheme promising fully homomorphic encryption and quantum assumption hardness proofs. In late 2014 GCHQ (Government Communications Head Quarters) announced that it had been working on such a scheme, nearly identical to [SV10] and claimed that not only was it easy to solve using a quantum computer but was subexponential for classical computer systems as well. The attack did not directly apply to most constructions of lattice-based schemes only a handful who had used ideal lattices in the cyclotomic field of characteristic two, where the private keys were represented by principal ideals which were short generators. 
 

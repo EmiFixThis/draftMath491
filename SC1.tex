@@ -18,7 +18,9 @@ Informally, Goldwasser and Micali's property says that a given cryptographic sch
 
 \subsection{Weaknesses in the Assumptions of RSA} 
 
+\todo[inline]{I'm not sure a section about weaknesses of RSA belongs here? It seems lke you should focus on defining/explaining semantic security?}
 
+\todo[inline]{You need to somehow introduce or define RSA, even if it's just a single sentence. You probably shouldn't just jump in to talking about weaknesses in RSA when you haven't mentioned it yet before now.}
 Goldwasser and Micali pointed out that the security assumptions given in [\cite{Rab19790}] and  [\cite{Riv19780}] had some particularly significant weaknesses that shouldn't be overlooked.
 
 
@@ -42,7 +44,7 @@ Second, the additional structure these messages posess may assist in decoding th
 \end{case} 
 
 \begin{exmp}
-Compare two functions $f(m)$ and $g(n)$, where the input $m$ for $f$ is some random ASCII sequence, and the input $n$ for $g$ is an ASCII sequence which represents sentences written in English. Then it may happen that $m$ is hard to recover from $f(m)$, but that $n$ is easy to recover from $g(n)$.
+Compare two functions $f(m)$ and $g(n)$, where the input $m$ for $f$ is some random ASCII sequence, and the input $n$ for $g$ is an ASCII sequence which represents sentences written in English. Then it may happen that $m$ is hard to recover from $f(m)$, but that $n$ is easy to recover from $g(n)$.\todo[inline]{This example maybe needs to be elaborated a bit more?}
 \end{exmp}
 
 \begin{rem}

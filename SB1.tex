@@ -1,13 +1,13 @@
 \section{Introductory Cryptographic Terminology and Notation}
 
 
-Public Key Cryptography (PKC) solves the problem of how to enable two people who have never met to communicate securely over insecure channels. 
+Public Key Cryptography (PKC) \todo[inline]{A bit of notation/naming clash here. You've been talking about "asymmetric-key" crypto so far, and now you've switched to "public key crypto". I'd generally try to stick to one or the other.}solves the problem of how to enable two people who have never met to communicate securely over insecure channels. 
  
 
 Public-key depends on the following assumptions: 
 \begin{enumerate}
- \item In the forward direction, we assume there exists a one-way function which is easy to compute.
- \item In the reverse direction, we assume that the same function is hard to invert. 
+ \item In the forward direction, we assume there exists a one-way function which is easy to compute.\todo[inline]{Do you need to formally define "one-way function" here?}\todo[inline]{Maybe give the function a name, i.e. "we assume there exists a one-way function F..."}
+ \item In the reverse direction, we assume that the same function is hard to invert.\todo[inline]{Maybe fomally define what it means to "invert"?}\todo[inline]{Again, maybe give the function a name.}
  \end{enumerate}
  
  
@@ -16,7 +16,7 @@ Public-key depends on the following assumptions:
 
 \subsection{Asymmetric \& Symmetric Cryptography} 
 
-The concepts of symmetric and asymmetric cryptographic-key schemes are given below as independent forms. However, it is rarely the case that these schemes will be applied in this manner particularly in a Public-key asymmetric system. Both asymmetric and symmetric key schemes are assumed to be classical cryptosystems. By way of classical we mean the systems are defined in terms of the chances the mathematical problems these systems are based upon have of being solved by an adversarial system. I.e., The liklihood of breaking the security of the ciphers in any of these systems is dependent on the assumed capabilities of the adversary's system. The common assumptions attributed to an adversary are as follows:
+The concepts of symmetric and asymmetric cryptographic-key schemes are given below as independent forms. However, it is rarely the case that these schemes will be applied in this manner particularly in a Public-key asymmetric system. Both asymmetric and symmetric key schemes are assumed to be classical cryptosystems\todo[inline]{Consider making a section specifically devoted to defining classical crypto}. By way of classical we mean the systems are defined in terms of the chances the mathematical problems these systems are based upon have of being solved by an adversarial system. I.e., The liklihood of breaking the security of the ciphers in any of these systems is dependent on the assumed capabilities of the adversary's system. The common assumptions attributed to an adversary are as follows:
 
 \begin{itemize}
     \item The adversary is in possession of (or has access to) slightly more than a reasonable (but still finite and non-quantum) amount of computational resources;
@@ -28,9 +28,9 @@ The concepts of symmetric and asymmetric cryptographic-key schemes are given bel
 In cannonical symmetric-key schemes only one key is generated for both the encryption and decryption algorithms. Symmetric-keys must therefore be exchanged over secure channels where both communicating parties have agreed in advance to the method of encryption and have exchanged secret keys. 
 
 
-Formally, we say the two parties are in possesion of a \textit{shared secret} and each party is mutually, as well as equally responsible for the maintenance of the secret which establishes and secures their communications. 
+Formally, we say the two parties are in possesion of a \textit{shared secret} and each party is mutually, as well as equally responsible for the maintenance of the secret which establishes and secures their communications.\todo[inline]{Redo this sentence. I get what you're saying, but it's worded in a sorta confusing way.}
 
-\todo{Is this supposed to be here, I think this sentence is supposed to be in asym.} In certain contexts this method can be made to be as secure as an asymmetric key system. It's main drawback is the shared secret which has the ability to invalidate the integrity of communications if either party is compromised.
+\todo{Is this supposed to be here, I think this sentence is supposed to be in asym.} In certain contexts this method can be made to be as secure as an asymmetric key system. It's main drawback is the shared secret which has the ability to invalidate the integrity of communications if either party is compromised.\todo[inline]{I don't think you mean to have this sentence here.}
 
 
 Additionally, since the method requires a secure channel as well as a shared secret both parties must know they will have a need for encrypted communication in advance and negotiate the means of transmission and key exchange prior to communicating. This means the parties must know each other prior to communicating. 
@@ -43,20 +43,20 @@ Additionally, since the method requires a secure channel as well as a shared sec
 We define a symmetric-key scheme as follows:
 
 
-Let $\mathbf{\mathcal{K}}$ be the set of all possible keys $k$  generated by a key generation function, called the \textit{keyspace}.
+Let $\mathbf{\mathcal{K}}$ be the set of all possible keys $k$  generated by a key generation function, called the \textit{keyspace}\todo[inline]{Is the key generation function called the keyspace? That's how this sentence reads, but I thought the keyspace was the set of all possible keys.}
 
 The key generation algorithm $\mathbf{Gen}$ is a probabilistic function which uses a distribution chosen which is appropriate with respect to the scheme.
 
-The key generation algorithm randomly chooses a key $k$ from it's distribution uniformly. 
+The key generation algorithm randomly chooses a key $k$ from it's distribution uniformly.
 
 
 Let $\mathbf{\mathcal{M}}$ be the set of all possible messages $m$ called the \textit{message} or \textit{{plaintext space}}.
 
 
-The encryption function $\mathbf{{Enc}}$ takes a key $k$ and message $m$ as input producing a ciphertext $c$.
+The encryption function $\mathbf{{Enc}}$ takes a key $k$ and message $m$ as input producing a ciphertext $c$.\todo[inline]{When you define a function (at least in CS, maybe math is different?) we usually write it as Enc(m, k), or Enc(m, k) -> c, to visually show the inputs/outputs.}
 
 
-The set of all possible ciphertexts (The ciphertext space) is denoted $\mathbf{\mathcal{C}}$, defined by taking the pair of spaces $\mathbf{(\mathcal{K}, \mathcal{M})}$ together. 
+The set of all possible ciphertexts (The ciphertext space) is denoted $\mathbf{\mathcal{C}}$, defined by taking the pair of spaces $\mathbf{(\mathcal{K}, \mathcal{M})}$ together.\todo[inline]{Rework this definition I think. The ciphertext space is all possible outputs of Enc, right?}
 
 
 Let $\mathbf{Dec}$ be the decryption function which takes a ciphertext $c$ and key $k$ as input returning the corresponding message $m$.
@@ -72,15 +72,15 @@ A symmetric-key cryptosystem is given by a set of algorthms $\mathbf{(Gen, Enc, 
 
 The cryptosystem performs it's functions in the following order:
 
-First, Alice and Bob use $Gen$ to produce a shared secret key $k$.
+First, Alice and Bob use $Gen$ to produce a shared secret key $k$.\todo[inline]{Take a sentence to introduce Alice and Bob, i.e. "Suppose Alice and Bob want to exchange a message. First, Alice and Bob use Gen..."}
 
 Whenever Bob wishes to send a message $m$ to Alice (or Alice to Bob) he inputs $(m,k)$ into $Enc$ to get a ciphertext of the message $c$.
-\[c \coloneqq Enc_{k}(m)\]
+\[c \coloneqq Enc_{k}(m)\]\todo[inline]{Doesn't Enc take K as an argument? Or does the literature generally use a subscript for K?}
 
 When Alice recives the ciphertext $c$ from Bob she inputs both $(c,k)$ into the decryption function and gets back the plaintext message $m$.
 \[Dec_{k}(c) \coloneqq m.\]
 
-To ensure the cryptosystem is correct, that is that it holds \textit{for every} message key pair $(k,m) : k \in \mathcal{K}$ and $m \in \mathcal{M}$ you must show that using the key on a ciphertext outputs the correct message. 
+To ensure the cryptosystem is correct, that is that it holds \textit{for every} message key pair $(k,m) : k \in \mathcal{K}$ and $m \in \mathcal{M}$ you must show that using the key on a ciphertext outputs the correct message.\todo[inline]{There's a technical word for this I think...but I can't think of the name off the top of my head.}
 
 \[Dec_{k}(Enc_{k}(m)) = m\]
 
@@ -90,9 +90,9 @@ To ensure the cryptosystem is correct, that is that it holds \textit{for every} 
 
 \subsubsection{Asymmetric-key Cryptography}
 In contrast symmetric-key schemes are determined by two sets of keys one for each party. Each set consists of a private key known only to the owner and a \emph{public key} which can be widely distributed.
-Public-key uses a \emph{one-way function} as its public key; this function is easy to compute but hard to invert and is available publicly for use as an encryption method for the key owner. A second key called the private key is known only to the key owner; this key is a \emph{trapdoor function} which can invert a ciphertext back to its plaintext form.
+Public-key uses a \emph{one-way function} as its public key; this function is easy to compute but hard to invert and is available publicly for use as an encryption method for the key owner. A second key called the private key is known only to the key owner; this key is a \emph{trapdoor function} which can invert a ciphertext back to its plaintext form.\todo[inline]{Is the key actually the function itself? I thought, generally speaking, private keys were e.g. a modulus or a particular input to the function, not the function itself (the function itself is public, right?)}
 
 \todo{Insert equations as above}
  
 \subsection{Connecting Symmetric \& Asymmetric Cryptography}
-It seems at first glance that asymmetric and symmetric cryptosystems are isolated methods of encryption. However, symmetric encryption is well-suited for the task of assisting asymmetric key schemes not only for efficiency purposes but also in the role of key management. 
+It seems at first glance that asymmetric and symmetric cryptosystems are isolated methods of encryption. However, symmetric encryption is well-suited for the task of assisting asymmetric key schemes not only for efficiency purposes but also in the role of key management.\todo[inline]{This section either needs to be elaborated on with an example or removed.}

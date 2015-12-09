@@ -1,5 +1,0 @@
-[0] Config.pm:327> INFO - This is Biber 2.2
-[1] Config.pm:330> INFO - Logfile is 'main.blg'
-[115] biber-darwin:286> INFO - === Mon Nov 16, 2015, 13:36:21
-[115] Biber.pm:334> INFO - Reading 'main.bcf'
-[299] Utils.pm:147> WARN - No data sources defined!

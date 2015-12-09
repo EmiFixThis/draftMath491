@@ -1,6 +1,8 @@
-\section*{Appendix A: Gauss' Circle Problem}
+\section{Appendix A: Gauss' Circle Problem}
 
+\begin{que}
 Given a circle $\mathcal{R}^{2}$ with radius $r \geq 0$ centered at the origin $\mathcal{O}$, how many integer lattice points $(m,n)$ can you find in the circle?
+\end{que}
 
 Since we can express a circle in terms of Euclidean coordinates as:
 
@@ -14,7 +16,7 @@ We can state the question in terms of our lattice points $(m,n)$ as:
 
 The area of the inside of a circle is approximately $A \approx \pi r^{2}$.
 
-Which gives us approximate solution in terms of $r$ for Gauss' circle problem (denoted $N(r)$) of:
+Which gives us an approximate solution in terms of $r$ for Gauss' circle problem (denoted $N(r)$) of:
 
 \[N(r) = \pi r^{2} + E(r),\]
 where $E(r)$ is some error term given by the radius.
@@ -25,8 +27,14 @@ where $E(r)$ is some error term given by the radius.
 Two forms for an exact solution for the circle problem can be given in terms of sums. 
 
 The first is a bit ugly:
-\[N(r) = 1 + 4 \sum_{i=0}^{\infty} \left( \lfloor \frac{r^{2}}{4i+1} \rfloor - \lfloor \frac{r^{2}}{4i+3} \rfloor \right).\]
+\begin{sol}
+    \[N(r) = 1 + 4 \sum_{i=0}^{\infty} \left( \bigg \lfloor \frac{r^{2}}{4i+1} \bigg \rfloor - \bigg \lfloor \frac{r^{2}}{4i+3} \bigg \rfloor \right)\]
+\end{sol}
 
 The second solution has a much nicer form if the sum of squares is defined as the number of ways of writing $n$ as the sum of two squares:
 
-\[N(r) = \sum_{n=0}^{r^{2}} r_{2}(n).\]
+\begin{sol}
+\[N(r) = \sum_{n=0}^{r^{2}} r_{2}(n)\]
+\end{sol}
+
+

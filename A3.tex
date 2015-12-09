@@ -1,15 +1,20 @@
-\section{Appendix C: Considerations When Choosing a Cryptosystem Replacement}
+\section{Appendix C: Definitions for Quantifying Hardness in Cryptography}
 
-There are two main considerations for choosing a particular replacement scheme. 
 
-The first is the environment which will be used to transmit the keys.  
-Not all environments are suited to the same types of schemes.
+\begin{defn}{Hardness}
+Let $\mathcal{P}$ be a problem such that $\mathcal{P}$ is hard, and let $\mathcal{S}$ be a cryptographic scheme. 
+We say that $\mathcal{S}$ is secure, if there does not exist a Probabilistic Polynomial Time (PPT) algorithm $\mathcal{A}$, which solves $\mathcal{P}$. 
+\end{defn}	
 
-Keys which will be transmitted over open network environments are better served by public key schemes. 
-These schemes also allow parties who have never met before or who have never shared keys to communicate securely over open networks such as the Internet.  
-Symmetric keys are the oldest type of encryption, characterized by private keys shared between parties which must be kept secret. 
-Symmetric key need for secrecy makes these schemes inherently ill-suited for open network environments. 
 
-The other consideration is a concept called Perfect Forward Secrecy.
+\begin{defn}{Tightness}
+The measure of the quality of a particular security reduction is called its tightness.
+If a security reduction is tight, then the scheme is \emph{at least as hard} as the mathematical problem on which it is based. 
+If the reduction is not tight, then the scheme is \emph{possibly easier} than the problem which it is based on. 
+\end{defn}
+	
 
-Schemes enabled with Perfect Forward Secrecy come with the assurance that if one message is compromised it will not lead to other messages also being compromised.
+\begin{defn}{Bit Hardness}
+A measure of the hardness of a mathematical problem to be used as a basis for some cryptographic scheme is called it’s bit hardness. 
+\end{defn}
+

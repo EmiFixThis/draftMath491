@@ -1,0 +1,17 @@
+\section{Appendix : The Class of co-NP}
+
+A decision problem $\mathcal{P}$ is in the complexity class $\mathbf{co-NP}$ if and only if its complement $\mathcal{P}^{c}$ is in $\mathbf{NP}$. 
+
+Informally, the class $\mathbf{co-NP}$ can be thought of as the set of counterexamples to problems in $\mathbf{NP}$; that is, the set of all problems for which the answer is `no'. 
+
+\begin{exmp}{The Subset Sum Problem}
+    \emph{Given a finite set of integers $S$, find a non-empty subset whose sum is zero.}
+
+    \textbf{Yes Instance:} Then some subset of $S$ with a sum of zero has been found.
+
+    \textbf{No Instance:} Then every subset of $S \neq \emptyset$ has a non-zero sum.
+\end{exmp}
+
+
+In terms of Turing machines,$\mathbf{co-NP}$ is the set of decision problems where the answer `no' can be verified in polynomial time by a non-deterministic Turing machine.
+

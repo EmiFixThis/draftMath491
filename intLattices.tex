@@ -1,0 +1,31 @@
+\section{Basic Lattice Concepts}
+
+\begin{defn}{Lattice Point}
+	A lattice point is a point in Euclidean space which sits at the intersection of one or more edges in the grid of a lattice. In particular, we are concerned with discrete lattice points which are isolated integer values around which there is a neighborhood where no other such points can be found.
+\end{defn}
+
+
+
+\begin{defn}{Lattice}
+	Let $\mathbb{R}^{n}$ represent the n-dimensional Euclidean space.
+	A lattice in $\mathbb{R}^{n}$, denoted $\Lambda$ is the set of all integer linear combinations of independent basis vectors $\mathbf{b}_{m} \in\mathbb{R}^{n}: m \leq n$ which satisfy:
+	\[ \Lambda(\mathbf{b_{1}},\mathbf{b_{2}}, \ldots, \mathbf{b_{m}}) = \bigg \{ \sum_{i=1}^{m} x_{i} \mathbf{b_{i}}: x_{i} \in \mathbb{Z}, \mathbf{b_{i}} \in \mathbb{R}^{n} \bigg \} \]
+\end{defn}
+
+\begin{defn}{Integer Lattice}
+	An integer lattice $\mathbb{Z}^{n}$ is an n-dimensional lattice in $\mathbb{R}^{n}$ whose lattice points are all integers. 
+\end{defn}
+
+
+We say that $n$ is the \emph{dimension} of the lattice, and likewise $m$ is the \emph{rank}. When the number of integer points (intersections, or coordinates) of the lattice is equal to the number of basis vectors, then the dimension is equal to the rank and we say the lattice is \emph{full-rank}. 
+
+\begin{thm}
+	A lattice $\Lambda$ is full rank if and only if it’s linear span $span(\mathbf{B}) = \{\mathbf{Bx}: \mathbf{x} \in \mathbb{R}\}$ is equal to to all of $\mathbb{R}^{n}$. 
+\end{thm}
+
+
+The $m$ vectors $\mathbf{b_{1}},\mathbf{b_{2}}, \ldots, \mathbf{b_{m}}$ are called the \emph{basis for the lattice}, which can be represented by a matrix $\mathbf{B} = [\mathbf{b_{1}},\mathbf{b_{2}}, \ldots, \mathbf{b_{m}}] \ \mathbb{R}^{n \times m}$. 
+Written as column vectors we have the compact representation: 
+$\Lambda(\mathbf{B}) = \{ \mathbf{Bx}: \mathbf{x} \in \mathbb{Z}^{n}$, under matrix/vector multiplication. 
+
+

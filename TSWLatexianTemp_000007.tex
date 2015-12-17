@@ -1,0 +1,162 @@
+\documentclass{article}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	PACKAGES
+
+\usepackage[USenglish,UKenglish,british,american]{babel}
+\usepackage{graphicx} 
+\usepackage{xcolor}
+\usepackage{parskip}
+\usepackage[colorinlistoftodos]{todonotes}
+
+\usepackage{array}
+\usepackage{tabularx}
+\usepackage{tcolorbox}
+\usepackage{float}
+\usepackage[font={small,sf},labelfont=bf,format=hang]{caption}
+
+%	MATH PACKAGES
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{amssymb}
+
+% TIKZ DIAGRAM PACKAGES
+\usepackage{tikz}
+\usetikzlibrary{shapes,arrows}
+\usepackage{verbatim}
+
+\usepackage{qcircuit}
+
+%	HYPERREF
+\usepackage{hyperref}
+\usepackage{url}
+
+%	GLOSSARY
+
+\usepackage{glossaries}
+%\newglossary[alg]{acronym}{acr}{acn}{\acronymname}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	MATH ENVS
+
+% Theorem Envs
+\theoremstyle{plain}
+\newtheorem{thm}{Theorem}
+\newtheorem{lemm}{Lemma}
+\newtheorem{cor}[thm]{Corollary}
+\newtheorem{prop}{Proposition}
+\newtheorem{con}{Conjecture}
+\newtheorem{crit}{Criterion}
+\newtheorem{ass}{Assertion}
+
+% Definition Envs
+\theoremstyle{definition}
+\newtheorem{exmp}{Example}
+\newtheorem{cond}{Condition}
+\newtheorem{prob}{Problem}
+\newtheorem{algo}{Algorithm}
+\newtheorem{que}{Question}
+\newtheorem{axi}{Axiom}
+\newtheorem{prot}{Property}
+\newtheorem{asu}{Assumption}
+\newtheorem{ojj}[asu]{Objection}
+\newtheorem{hyp}{Hypothesis}
+\newtheorem{obj}{Objective}
+\newtheorem{sol}{Solution}
+\theoremstyle{defin}{{\itshape}{:}{0.5pt}
+\newtheorem{defn}{Definition}
+
+% Remark Envs
+\theoremstyle{remark}
+\newtheorem*{rem}{Remark}
+\newtheorem{nota}{Notation}
+\newtheorem{cla}{Claim}
+\newtheorem{summ}{Summary}
+\newtheorem{ack}{Acknowledgment}
+\newtheorem{case}{Case}
+\newtheorem{cln}{Conclusion}
+\newtheorem{nt}{Note}
+
+
+% GLOSSARY SPECIFICATION
+\makeglossaries
+\loadglsentries{glossary}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	BEGIN DOCUMENT
+\begin{document}
+
+% TITLE PAGE
+\include{title}
+
+% ToC
+\tableofcontents
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% BODY
+
+\include{01} % introduction
+
+\include{02} % intro crypto
+\include{03} % security
+\include{031}
+\include{04}
+\include{05}
+
+\include{06}
+
+
+\include{07} % shor's table
+\include{grovers} 
+\include{LLL}
+\include{intLattices}
+\include{08} % lattice problems
+\include{pqcrypto}
+\include{09} % LBC
+
+
+\include{10}
+
+%\include{SG1}
+
+\include{11} % ILBC
+\include{12} % counterexamples
+
+\include{13} % Soliloquy
+%\include{SF2} % FHE
+\include{14}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% APPENDICES
+\include{A1} % Gauss' Circle Problem
+\include{A2} % Security Objectives
+\todo[inline]{A3: Replace Me} %\include{A3} 
+\include{A4}  \todo[inline]{Insert notes.} % Time Complexity
+\include{A5} % lattice laws
+\include{A6} % Lattice Morphisms
+\include{A7} % NC class
+\include{A8} % Basic Properties of Rings
+\include{gates} % Boolean Logic Gates
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% LIST OF TODOS
+\listoftodos
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% BIBLIOGRAPHY
+\pagestyle{empty}
+\bibliographystyle{amsplain}
+\nocite{*}
+\bibliography{bibbed,figsbib}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% GLOSSARIES
+\clearpage
+\printglossaries
+\clearpage
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%	END DOCUMENT
+\end{document}

@@ -1,0 +1,30 @@
+\subsection{Grover's Algorithm}
+
+
+Grover’s algorithm is a probabilistic quantum search algorithm which is able to find the unique input of a\gls{black box} function $f$, which maps to a unique output in $\mathcal{O}(N^{1/2})$ calculations, 
+where $N = |Dom(f)|$. 
+It was shown to be optimal by \cite{Ben1997}, with only $\mathcal{O}(N^{1/2})$ minimal number of evaluations required to find a solution. Despite that Grover’s is a probabilistic algorithm the number of evaluations expected before a solution is found is constant and not dependent upon $N$. 
+
+Grover's only speeds up the computation of a black box function only quadratically. For large enough domains, $N$ is fast enough to allow brute force solutions of 128 bit symmetric keys in approximately $2^{64}$ calculations, 256 bit in $2^{128}$. 
+
+Since Grover’s is a search algorithm (usually defined for databases) it is possible to consider the input and output values of $f$ as corresponding database entries and `search’ for one or more $x$ values to satisfy a given $y$ value. That is, we can think of Grover’s as performing an inversion on $y=f(x)$ and returning the correct $x$. 
+
+\begin{figure}
+    \begin{center}
+        \begin{align*}
+            \Qcircuit @C=1em @R=.7em{
+                   &         &                      &                         &                      & \ustick{\text{Grover diffusion operator}} \\
+  \lstick{\ket{0}} & /^n \qw & \gate{H^{\otimes n}} & \multigate{1}{U_\omega} & \gate{H^{\otimes n}} & \gate{2 \ket{0^n}\bra{0^n} - I_n}         & \gate{H^{\otimes n}} & \qw & \cdots & & \meter & \cw \\
+  \lstick{\ket{1}} & \qw     & \gate{H}             & \ghost{U_\omega}        & \qw                  & \qw                                       & \qw                  & \qw & \cdots & \\
+                   &         &                      &                & \dstick{\text{Repeat $O(\sqrt{N})$ times}}
+        \gategroup{2}{5}{2}{7}{.7em}{^\}}
+      \gategroup{2}{4}{3}{10}{.7em}{_\}}
+ }
+\end{align*}
+\end{center}
+\label{fig:grovalg}
+\caption{Grover’s Algorithm Quantum Circuit}
+\end{figure}
+\cite{Ben2011}
+
+	

@@ -1,0 +1,95 @@
+\section*{Appendix H: Logic Gates}
+
+% Not Gate
+
+\begin{table}
+\begin{center}
+\begin{tabularx}{150pt}{|X|X|}
+\textbf{NOT Gate} \\ \hline
+\textbf{Input(A)} & \textbf{Output(C)} \\ \hline
+0 & 1 \\ \hline
+1 & 0 \\ \hline
+\end{tabularx}
+\end{center}
+\label{tb:not}
+\end{table}
+
+
+% Nor Gate
+\begin{table}
+\begin{center}
+\begin{tabularx}{150pt}{|X|X|X|}
+\textbf{Input(A)} & \textbf{Input(B)} & \textbf{Output(C)} \\ \hline
+0 & 0 & 1 \\ \hline
+1 & 0 & 0 \\ \hline
+0 & 1 & 0 \\ \hline
+1 & 1 & 1 \\ \hline
+\end{tabularx}
+\caption{NOR Gate}
+\label{tb:nor}
+\end{center}
+\label{tb:nor}
+\end{table}
+
+% Negated OR
+\begin{table}
+\begin{center}
+\begin{tabularx}{150pt}{|X|X|X|}
+\textbf{Input(A)} & \textbf{Input(B)} & \textbf{Output(C)} \\ \hline
+0 & 0 & 1 \\ \hline
+0 & 1 & 1 \\ \hline
+1 & 0 & 0 \\ \hline
+1 & 1 & 0 \\ \hline
+\end{tabularx}
+\caption{$\neg OR$}
+\label{tb:ntor}
+\end{center}
+\end{table}
+
+% Negated AND
+
+\begin{table}
+\begin{center}
+\begin{tabularx}{150pt}{|X|X|X|}
+\textbf{Input(A)} & \textbf{Input(B)} & \textbf{Output(C)} \\ \hline
+0 & 0 & 1 \\ \hline
+0 & 1 & 0 \\ \hline
+1 & 1 & 0 \\ \hline
+1 & 1 & 0 \\ \hline
+\end{tabularx}
+\caption{$\neg AND$}
+\label{tb:ntand}
+\end{center}
+\end{table}
+
+% NAND
+
+\begin{table}
+\begin{center}
+\begin{tabularx}{150pt}{|X|X|X|}
+\textbf{Input(A)} & \textbf{Input(B)} & \textbf{Output(C)} \\ \hline
+0 & 0 & 1 \\ \hline
+1 & 0 & 1 \\ \hline
+0 & 1 & 1 \\ \hline
+1 & 1 & 0 \\ \hline
+\end{tabularx}
+\caption{NAND}
+\label{tb:nand}
+\end{center}
+\end{table}
+
+% Not(m OR n) = NAND
+
+\begin{table}
+\begin{center}
+\begin{tabularx}{150pt}{|X|X|X|X|}
+\textbf{Input(m)} & \textbf{Input(n)} & \textbf{Output(m OR n)} & \textbf{$\neg(Output(m OR n))$} \\ \hline
+0 & 0 & 0 & 1 \\ \hline
+0 & 1 & 0 & 1 \\ \hline
+1 & 0 & 0 & 1 \\ \hline
+1 & 1 & 1 & 0 \\ \hline
+\end{tabularx}
+\caption{$\neg(m OR n) = NAND$}
+\label{tb:nand2}
+\end{center}
+\end{table}

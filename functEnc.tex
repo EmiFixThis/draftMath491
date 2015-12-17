@@ -1,0 +1,11 @@
+Functional Encryption
+
+For a PKC of a given function F, F contains the following algorithms:
+\begin{enumerate}
+    \item $(p_{k},ms_{k}) \leftarrow Setup(1^{\lambda}$: creates a public key $p_{k}$ and a master secret key $ms_{k}$.
+    \item $s_{k} \leftarrow Gen(ms_{k}, k)$: uses the master secret key to generate a new secret key $s_{k}$ for a value k.
+    \item $c \leftarrow Enc(p_{k}, x)$: uses the public key to encrypt a message x.
+    \item $F(k,x) \leftarrow Dec(s_{k},c)$: uses secret key to calculate a new secret key $s_{k}$ a function with a value $c$ encrypts.
+\end{enumerate}
+
+\emph{Functional encryption is a generalization of IBE and ABE.} 

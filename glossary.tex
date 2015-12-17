@@ -1,0 +1,223 @@
+% glossary file
+
+\newglossaryentry{unimodular lattice}{
+	name={Unimodular Lattice},
+	description={An integral lattice which has determinant value 1 or (-1).}
+}
+
+\newglossaryentry{unimodular lattice equivalency}{
+	name={Unimodular Lattice Equivalency},
+	description={In n-dimensional Euclidean space, the value of the determinant requires the fundamental domain of the lattice has a volume equal to one.}
+}
+
+\newglossaryentry{trapdoor function}{
+	name={Trapdoor Function},
+	description={The usual term trapdoor function is rather misleading. The trapdoor of a function is an added structure which provides information enabling the inverse of the one-way function to be easily computed.}
+}
+
+\newglossaryentry{one-way function}{
+	name={One-way function},
+	description={A one-way function is one in which it is easy to compute the output, but reversing the function to retrieve the input; i.e. taking the inverse should be hard to compute.}
+}
+
+\newglossaryentry{one-way function assumption}{
+	name={One-way Function Assumption},
+	description={The usual practice when constructing cryptographic schemes is to assume that a one-way function exists, and that we can construct a corresponding trapdoor function which provides some added information allowing the one-wayness of this function to be easily computed. However, in reality this assumption may indirectly depend on the unanswered `Does \ensuremath{$\mathbf{FP \stackrel{?}{=} FNP}$}', which would imply that \ensuremath{$\mathbf{P \stackrel{?}{=} NP}$}. However, it remains unknown if a result for \ensuremath{$\mathbf{P \stackrel{?}{=} NP}$} would imply the existence of one-way functions.}
+}
+\newglossaryentry{unimodular lattice example}{
+	name={Unimodular Lattice Example 1},
+	description={One example of a unimodular lattice is the E8 lattice.}
+}
+
+\newglossaryentry{unimodular lattice example 2}{
+	name={Unimodular Lattice Example 2},
+	description={Another example of a unimodular lattice is the Leech lattice.}
+}
+
+\newglossaryentry{automorphism}{
+	name={automorphism},
+	description={In general, an automorphism is transformation of some system of objects onto itself. It must be noted that this definition has different meanings depending on the context.}
+}
+
+\newglossaryentry{code}{
+	name={code},
+	description={Codes operate semantically on strings such as words, phrases, or sentences. For example, a code word or phrase could be anything such as “open sesame” or `the chairman's name is Bob' both having the same meaning `allow this person entry' if the word or phrase matches the one given to the doorman.}
+}
+
+\newglossaryentry{cipher}{
+	name={cipher},
+	description={A cipher is a syntactic operation on letters or groups of letters. An example of this is a Cesar cipher such as $A \rightarrow F$, or $B \rightarrow G$.}
+}
+
+\newglossaryentry{key recovery attack}{
+	name={key recovery attack},
+	description={Attacks that lead to an adversary recovering a secret key (not their own).}
+}
+
+\newglossaryentry{feasible set}{
+    name={feasible set},
+    description={the set of all possible points (sets of values of the choice variables) of an optimization problem that satisfy the problem's constraints, potentially including inequalities, equalities, and integer constraints.}
+}
+
+\newglossaryentry{gapsvpb promise}{
+    name={GapSVP-$\beta$ 1},
+    description={$GapSVP_{\beta}$ is a \emph{promise problem} which differentiates between the instances of SVP where the answer is at most 1 or larger than $\beta$, where $\beta$ is allowed to be a fixed function of $f(n)$, such that $n$ is the number of vectors.}
+}
+
+\newglossaryentry{gapsvpb decisional}{
+    name={GapSVP-$\beta$ 2},
+    description={Given a basis $b$ for a lattice $\Lambda$, the $GapSVP-{\beta}$ decides if $\Lambda(b) \leq 1$ or $\Lambda{b} > \beta$, in all other cases the algorithm returns an error.}
+}
+
+\newglossaryentry{gapcvpb}{
+    name={$GapCVP_{\beta}$},
+    description={The $GapCVP_{\beta}$ algorithm takes a basis $b$ for a lattice $\Lambda$ and a vector $\mathbf{v}$ and answers whether or not there exists a lattice vector with a distance between itself and the given vector is at most one, or if every lattice vector has a distance greater than $\beta$ from the given vector.}
+}
+
+\newglossaryentry{ideal order theory}{
+    name={Ideal Order Theoretic Notion},
+    description={Given a non-empty subset S of a poset $(P, \leq)$, S is an ideal $I$, if for all $x \in I, y \leq x \Rightarrow y \in I$ (meaning, $I$ is a lower set). For all $x,y \in I$, there exists an element $z \in I$, such that $x \leq z$ and $\y \leq z$, (meaning, $I$ is a directed set).}
+}
+
+\newglossaryentry{ideal}{
+    name={Ideal Order Theoretic Notion},
+    description={In general for arbitrary posets defined over lattices, a subset $I \nequal \emptyset$ of a poset $(P, \leq)$ is an ideal if and only if $I$ is a lower set which is closed under finite joins (suprema), and if for all $x,y \in I$ the join $x \vee y$ is also in $I$.}
+}
+
+\newglossaryentry{lattice order theory}{
+    name={Lattice (Order Theoretic Notion)},
+    description={In order theory, a lattice is a partially ordered set (poset) in which the greatest lower bound called the join infimum and least upper bound (called the meet or supremum) both exist and are unique. It follows by completeness over lattices that every finite subset (non-empty) also contains both a join and a meet.}
+}
+
+\newglossaryentry{noncomputability}{
+    name={noncomputability},
+    description={Noncomputability refers to a type of problem for which a solution can be described but not computed. One example of a non-computable problem is the Halting Problem.}
+}
+
+\newglossaryentry{poset}{
+	name={poset},
+	description={A poset is a partial ordering of a set $S$ by a binary relation $\leq$, which is reflexive, antisymmetric, and transitive. That is, for two elements $a,b \in S$ the following hold: $a \leq a$ (reflexivity). If $a \leq b$ and $b \leq a$, then $a=b$ (anti-symmetry). If $a \leq b$ and $b \leq c$ then $a \leq c$ (transitivity).}
+}
+
+\newglossaryentry{asymmetric-key}{
+    name={asymmetric key encryption},
+    description={Asymmetric key encryption (public-key encryption) is a method of encryption which uses a pair of keys in order encrypt and decrypt messages. The public key may be used by anyone to encrypt messages for a certain user. The secret key, is known only to that user and allows the decryption of messages which were encrypted using the public key.}
+}
+
+\newglossaryentry{symmetric-key}{
+    name={symmetric-key encryption},
+    description={Symmetric key encryption involves the use of only one key which all communicating parties share. The key is secret, and performs both the encryption and decryption of messages. }
+}
+
+\newglossaryentry{shared secret}{
+    name={shared secret},
+    description={A shared secret is some secret piece of information which allows two or more parties to engage in secure communication.}
+}
+
+\newglossaryentry{confidential channel}{
+    name={confidential channel},
+    description={A confidential channel enables communication that is resistant to interception.}
+}
+
+\newglossaryentry{secure channel}{
+    name={secure channel},
+    description={A secure channel enables communication which may be both resistant to interception, and alteration by unauthorized users. Secure channels are both authorized channels as well as confidential channels.}
+}
+
+
+\newglossaryentry{secret key}{
+    name={secret key},
+    description={A secret key is an added bit of information which may allow users to use one or both the encryption and decryption functions of a cryptosystem, depending on the type of scheme in place.}
+}
+
+\newglossaryentry{authentic channel}{
+    name={authentic channel},
+    description={An authentic channel enables communication which may be resistant to alteration but not necessarily resistant to interception.}
+}
+
+\newglossaryentry{message space}{
+    name={message space},
+    description={The message space is the set of all possible plaintext messages in a transmission.}
+}
+
+
+\newglossaryentry{public key}{
+    name={public key},
+    description={A public key is a randomly generated function which allows the use of the encryption function for a given scheme.}
+}
+
+\newglossaryentry{insecure channel}{
+    name={insecure channel},
+    description={An  insecure channel is one in which the method of transmission between communicating parties carries no guarantee of resistance to interception, or alteration. }
+}
+
+\newglossaryentry{hardness}{
+    name={hardness assumption},
+    description={In general, a hardness assumption invokes the computational security condition; this condition (which is actually the reality) assumes that the adversary is in someway computationally limited. This definition is a weaker form of the definition for information theoretic security; it is invoked when the stronger definition cannot be achieved. }}
+
+\newglossaryentry{black box}{
+    name={black box},
+    description={Any object which may be analyzed only in terms of its inputs and outputs without knowing about any internal workings, or mechanisms which process, and return these quantities.}}
+
+\newglossaryentry{integer lattice}{
+    name={integer lattice},
+    description={The n-dimensional integer lattice denoted $\mathbb{Z}^{n}$ is a lattice in $\mathbb{R}^{n}$ whose lattice points all correspond to integer values. $\mathbb{Z}^{n}$ is sometimes called a grid, or square lattice and it is the simplest form of a root lattice. The integer lattice is odd, and unimodular.}}
+    
+\newglossaryentry{unimodular}{
+    name={unimodular lattice},
+    description={A unimodular lattice is an  integral lattice which has determinant value 1 or (-1). In n-dimensional Euclidean space, the value of the determinant requires the fundamental domain of the lattice has a volume equal to one. Two examples of unimodular lattices are the Leech and E8 lattices. }}
+    
+\newglossaryentry{code}{
+    name={code},
+    description={Codes operate semantically on strings such as words, phrases, or sentences. For example, a code word or phrase could be anything such as “open sesame” or "the chairman's name is Bob" both having the same meaning "allow this person entry" if the word or phrase matches the one given to the doorman.}
+}
+
+\newglossaryentry{cipher}{
+    name={cipher},
+    description={A cipher is a syntactic operation on letters or groups of letters. An example of this is a Cesar cipher such as $A \rightarrow F$, $B \rightarrow G$.}
+}
+
+\newglossaryentry{key-recovery}{
+    name={key-recovery attack},
+    description={Key recovery attacks allow an adversary to find a secret key.}
+}
+
+\newglossaryentry{gapsvp}{
+    name={gapCVP},
+    description={$GapSVP_{\beta}$ is a \emph{promise problem} which differentiates between the instances of SVP where the answer is at most 1 or larger than $\beta$, where $\beta$ is allowed to be a fixed function of $f(n)$, such that $n$ is the number of vectors. iven a basis $b$ for a lattice $\Lambda$, the $GapSVP-{\beta}$ decides if $\Lambda(b) \leq 1$ or $\Lambda{b} > \beta$, in all other cases the algorithm returns an error.}
+}
+
+\newglossaryentry{gapcvp}{
+    name={gapCVP},
+    description={The $Gap-CVP_{\beta}$ algorithm takes a basis $b$ for a lattice $\Lambda$ and a vector $\mathbf{v}$ and answers whether or not there exists a lattice vector with a distance between itself and the given vector is at most one, or if every lattice vector has a distance greater than $\beta$ from the given vector.}
+}
+
+\newglossaryentry{ideal}{
+    name={ideal},
+    description={Given a non-empty subset S of a poset $(P, \leq)$, S is an ideal $I$, if for all $x \in I, y \leq x \Rightarrow y \in I$ (meaning, $I$ is a lower set). For all $x,y \in I$, there exists an element $z \in I$, such that $x \leq z$ and $\y \leq z$, (meaning, $I$ is a directed set). In general for arbitrary posets defined over lattices, a subset $I \nequal \emptyset$ of a poset $(P, \leq)$ is an ideal if and only if $I$ is a lower set which is closed under finite joins (suprema), and if for all $x,y \in I$ the join $x \vee y$ is also in $I$.}
+}
+
+\newglossaryentry{lattice}{
+    name={lattice},
+    description={In order theory, a lattice is a partially ordered set (poset) in which the greatest lower bound (called the join (infimum)) and least upper bound (called the meet (supremum)) both exist and are unique. It follows by completeness over lattices that every finite subset (non-empty) also contains both a join and a meet.}
+}
+
+\newglossaryentry{integral-domain,
+    name={Integral Domain},
+    description="Let $D$ be any integral domain containing the real number system $R^{n}$ and a square root of $i = (-1)$. Then the subdomain of $D$ generated by $R^{n}$ and $i$ is isomorphic with $\mathbb{C}$."
+}
+
+\newglossaryentry{C-field,
+    name={Field of Complex Numbers},
+    description={The complex number system, is a field containing a subfield isomorphic to $R^{n}$ and a root of $x^{2} + 1 = 0$.}}
+
+\newglossaryentry{ngon,
+    name={n-gon Theorem},
+    description={The complex n-th roots of unity are the vertices of a regular polygon of n sides and radius one.}}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Acronyms
+\newacronym{cesg}{CESG}{Communications-Electronics Security Group}
+\newacronym{gchq}{GCHQ}{Government Communications Headquarters}
+\newacronym{pkc}{PKC}{Public Key Cryptography}

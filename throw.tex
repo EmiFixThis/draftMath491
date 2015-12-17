@@ -1,0 +1,69 @@
+In nearly every \emph{classical} cryptographic construction the object is as follows:
+
+\begin{itemize}
+	\item Generate a specific instance of a problem and it's solution in the complexity class NP\footnote{\NP is the computational complexity class of non-determininistic polynomial time algorithms, elaborated upon further on in this section.},
+	\item such that it is reasonable to conclude the problem is \begin{quotation} hard to solve \end{quotation} for some reason; where \begin{quotation} hard to solve \end{quotation} is meant in the worst-case.
+\end{itemize}
+
+The usual example of this type of problem is RSA and it's related problem \emph{Integer Factorization}. 
+
+
+\todo{use a different example. Perhaps discrete log and ecc. This one is so over done}
+
+
+\textbf{Example:} \emph{Integer Factorization and RSA}
+
+
+\todo{fix pseudocode box}
+\begin{center}
+\fbox{\pseudocode[linenumbering,syntaxhighlight=auto]{%
+  
+\end{center}
+
+\todo{change to caption}
+\textbf{RSA Pseudocode Example}
+
+
+The security of RSA in the above example depends on the fact that neither $p$ nor $q$ will be approximately $\sqrt{N}$. But this is not the only way for $p$ and $q$ to create a \emph{weak} composite ($N$). It turns out that not all composites are equally hard to break into their respective prime factors. In fact, not only are there primes of many different forms of prime that will always, (even just sometimes, unexpectedly) create composite integers that will be efficiently and easily factorable; moreover, we don't even know all the ways primes can create \emph{weaker} composites. If don't know all the forms of primes which will make these types of easily decomposable numbers, we can't even test for them. We want to believe these problems are hard to solve, but despite our best efforts we have no evidence that they really are. For instance, we would like to believe that RSA is \emph{at least as hard to solve} as the integer factorization problem, but we have no proof that this is true. 
+
+So how do we get away with assuming that integer factorization being hard, is at all a reasonable assumption to make?
+
+
+Even more, didn't we say that the statement \begin{quotation} hard to solve \end{quotation} meant in the worst-case instance?!
+
+In reality, many cryptographers have hoped choosing (or not choosing) primes of a certain type would ensure that $N$ would be hard to factor and failed horribly at doing so. None chose their forms of primes arbitrarily, they all seemed to make reasonable choices for primes to keep in or leave out; it didn't matter, more weak composites kept popping up in unexpected and annoying ways. 
+
+
+\section*{There are infinitly many primes...}
+
+
+ 
+
+
+\subsection*{Average-case Complexity}
+
+
+
+\{def}
+
+
+
+
+
+In cases where the polynomial $ \Phi (x) $ is a cyclotomic polynomial, the difficulty of solving the search version of RLWE problem is equivalent to finding a short vector (but not necessarily the shortest) vector in an ideal lattice formed from elements of $ Z[x]/\Phi (x) $ represented as integer vectors.
+
+This problem is commonly known as the Approximate Shortest Vector Problem (α-SVP) and it is the problem of finding a vector shorter than α times the shortest vector. The authors of the proof for this equivalence write:
+
+"... we give a quantum reduction from approximate SVP (in the worst case) on ideal lattices in R to the search version of ring-LWE, where the goal is to recover the secret s ∈ Rq (with high probability, for any s) from arbitrarily many noisy products.""
+
+"However, there is not yet a proof to show that the difficulty of the α-SVP for ideal lattices is equivalent to the average α-SVP. Rather we have a proof that if there are ANY α-SVP instances that are hard to solve in ideal lattices then the RLWE Problem will be hard in random instances."
+
+"A major advantage that RLWE based cryptography has over the original Learning With Errors (LWE) based cryptography is found in the size of the public and private keys. RLWE keys are roughly the square root of keys in LWE."
+
+"The corresponding LWE scheme would require public keys of 49 million bits for the same level of security."
+
+"The Ring Learning with Errors (RLWE) problem is built on the arithmetic of polynomials with coefficients from a finite field."
+
+"The RLWE context works with a finite sub-ring of this infinite ring. The sub-ring is typically the finite quotient (factor) ring formed by reducing all of the polynomials in $ F_{q}[x] $ modulo an irreducible polynomial $ \Phi (x) $. This finite quotient ring can be written as $ F_{q}[x]/\Phi (x) $ though many authors write $ Z_{q}[x]/\Phi (x) $ ."
+
+We present a fully homomorphic encryption scheme that is based solely on the(standard) learning with errors (LWE) assumption. Applying known results on LWE, the security of our scheme is based on the worst-case hardness of ``short vector problems'' on arbitrary lattices. Our construction improves on previous works in two aspects:\begin{enumerate}\item We show that ``somewhat homomorphic'' encryption can be based on LWE, using a new {\em re-linearization} technique. In contrast, all previous schemes relied on complexity assumptions related to ideals in various rings. \item We deviate from the "squashing paradigm'' used in all previous works. We introduce a new {\em dimension-modulus reduction} technique, which shortens the cipher texts and reduces the decryption complexity of our scheme, {\em without introducing additional assumptions}. \end{enumerate}Our scheme has very short cipher texts and we therefore use it to construct an asymptotically efficient LWE-based single-server private information retrieval (PIR) protocol. The communication complexity of our protocol (in the public-key model) is $k \cdot \polylog(k)+\log \dbs$ bits per single-bit query (here, $k$ is a security parameter).

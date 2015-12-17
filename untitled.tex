@@ -1,0 +1,87 @@
+most efficient and advanced systems in both categories rely on the ring-LWE problem \[LPR10], an analogue of the standard learning with errors problem \[Reg05]
+
+Keywords: 
+Source: 
+Scents: 
+Slip 20
+
+In all applications of ring-LWE, and particularly those related to homomorphic encryption, a main technical challenge is to control the sizes of the noise terms when manipulating ring-LWE samples under addition, multiplication, and other operations.
+
+Keywords: 
+Source: 
+Scents: 
+Slip 21
+
+For correct decryption, q must be chosen large enough so that the final accumulated error terms do not “wrap around” modulo q and cause decryption error.
+
+Keywords: 
+Source: 
+Scents: 
+Slip 22
+
+On the other hand, the error rate (roughly, the ratio of the noise magnitude to the modulus q) of the original published ring-LWE samples and the dimension n trade off to determine the theoretical and concrete hardness of the ring-LWE problem.
+
+Keywords: 
+Source: 
+Scents: 
+Slip 23
+
+Tighter control of the noise growth therefore allows for a larger initial error rate which permits a smaller modulus q and dimension n, which leads to smaller keys and ciphertexts, and faster operations for a given level of security.
+
+Keywords: 
+Source: 
+Scents: 
+Slip 24
+
+the search/decision equivalence for ring-LWE in arbitrary cyclotomics \[LPR10] relies on their special algebraic properties, as do many recent works that aim for more efficient fully homomorphic encryption schemes (e.g., \[SV11, BGV12, GHS12a, GHS12b, GHPS12]).
+
+Keywords: 
+Source: 
+Scents: 
+Slip 25
+
+In particular, power-of-two cyclotomics, i.e., where the index m = 2  k for some k ≥ 1, are especially nice to work with, because (among other reasons) n = m/2 is also a power of two, Φ m (X) = X n + 1 is maximally sparse, and polynomial arithmetic modulo Φ m (X) can be performed very efficiently using just a slight tweak of the classical n-dimensional FFT (see, e.g., \[LMPR08]).
+
+Keywords: 
+Source: 
+Scents: 
+Slip 26
+
+`Indeed, power-of-two cyclotomics have become the dominant and preferred class of rings in almost all recent ring-based cryptographic schemes (e.g., \[LMPR08, LM08, Lyu09, Gen09b, Gen10, LPR10, SS11, BV11b, BGV12, GHS12a, GHS12b, Lyu12, BPR12, MP12, GLP12, GHPS12]), often to the exclusion of all other rings.' \cite{Cra2015}
+
+Keywords: 
+Source: 
+Scents: 
+Slip 27
+
+While power-of-two cyclotomic rings are very convenient to use, there are several reasons why it is essential to consider other cyclotomics as well
+
+most obvious, practical reason is that powers of two are sparsely distributed, and the desired concrete security level for an application may call for a ring dimension much smaller than the next-largest power of two.
+
+restricting to powers of two could lead to key sizes and runtimes that are at least twice as large as necessary.
+
+A more fundamental reason is that certain applications, such as the above-mentioned works that aim for more efficient (fully) homomorphic encryption, require the use of non-power-of-two cyclotomic rings.
+
+This is because power-of-two cyclotomics lack the requisite algebraic properties needed to implement features like SIMD operations on “packed” ciphertexts, or plaintext spaces isomorphic to finite fields of characteristic two (other than F 2 itself)."
+
+
+
+
+A final important reason is diversification of security assumptions."
+
+
+
+Keywords: 
+Source: 
+Scents: 
+Slip 29
+
+So while we might conjecture that ring-LWE and ideal lattice problems are hard in every cyclotomic ring (of sufficiently high dimension), some rings might turn out to be significantly easier than others."
+
+Unfortunately, working in non-power-of-two cyclotomics is rather delicate, and the current state of affairs is unsatisfactory in several ways.
+
+"Unlike the special case where m is a power of two, in general the cyclotomic polynomial Φ m (X) can be quite “irregular” and dense, with large coefficients."
+
+While in principle, polynomial arithmetic modulo Φ m (X) can still be done in O(n log n) scalar operations (on high-precision complex numbers), the generic algorithms for achieving this are rather complex and hard to implement, with large constants hidden by the O(·) notation."
+
+If one views Z\[X]/(Φ m (X)) as the set of polynomial residues of the form a 0 + a 1 X + · · · + a n−1 X n−1 , and uses the naïve “coefficient embedding” that views them as vectors (a 0 , a 1 , . . . , a n−1 ) ∈ Z  n to define geometric quantities like the \` 2 norm, then both the concrete and theoretical security of cryptographic schemes depend heavily on the form of Φ m (X).

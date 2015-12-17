@@ -1,0 +1,20 @@
+\section{Counterexamples Win Out}
+
+
+The security of a cryptosystem must necessarily take higher precedence over the desire for efficiency. Neither condition can be ignored but the purpose of the scheme is to prevent the observation of data by unauthorized parties; it is possible to phrase this objective sufficiently but not necessarily. A slow system, even if communication at a snails pace is less than optimal or even usefull, will still fullfill the purpose in create a secure communication system. 
+
+However, if we allow a cryptographic scheme to be efficient but we do not provide a lower bound for it's security there is no reason for expending effort to create, use, or acknowledge the scheme at all. The scheme has become a false statement. There are many instances in which such a choice was made in modern cryptography. In Particular, a recent example comes from a set of cryptographic schemes used in ideal lattice-based cryptography. In this instance, a great many researchers took for granted the level of security lattice-based schemes were conjectured to impart, and turned their focus entirely to the task of advancing the efficiency of their schemes instead. These types of constructions on ideal rings soon became the largest subset of all possible lattice problems not just those defined over rings. Researchers increasingly assumed without proof that these problems would prove to be hard without attempting to show that it was or was not the case more, assuming their systems would prove to be as secure as schemes defined over more general lattices, but leaving the task to someone else.
+
+
+In mathematics the, the best possible refutation of a claim something does not or cannot exist or have a certain property is a counterexample. Counterexamples need not be proven for more than one case, and in applied areas these examples often come in the form of use case. Cryptography is no exception to this rule. Particularly since it requires many assumptions to even begin a new construction.
+
+
+The faith of the ideal lattice cryptographers in the strength of their efficient constructions is not a new mistake in the history of cryptography. This assumption of strength is famously mirrored in the arrogance of engineers of the German Enigma ciphers of World War II, faithfully relying on their calculations of theoretical strength, and refusing to compute any possible realworld value for the system.
+
+
+There is no better such example in modern lattice-based cryptography then the Soliloquy problem; an unexpected announcement by British researchers in the \acrfull{cesg} (the information assurance division of the \acrshort{gchq}). This informal report dubbed \textit{Soliloquy: A Cautionary Tale} \cite{Cam2014}, brought on a slew of uncharacteristically emotional responses in the cryptographic community, a mixture of shock, speculation, \footnote{As well as a few cases of well-earned, smug \emph{`I told you so'} sentiments. As for researchers working towards efficient constructions of similar schemes there was a backlash of reactions ranging the spectrum of in one direction, unsurprised acceptance and in the opposite direction, rage and denial.} 
+
+The announcement by \acrshort{cesg}, vaguely outlined a cryptosystem given over ideal lattices of characteristic two, a characteristic much overused despite the warnings of more experienced researchers \cite{Cra2015} that efforts in other fields were necessary in order to guard against the possibility that a particular field characteristic was shown to exhibit such a vulnerability (and many other very good reasons). 
+
+
+

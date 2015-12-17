@@ -1,0 +1,130 @@
+\section{Attack Models}
+
+\subsection{Known Plaintext Attack (KPA)}
+
+The adversary in this case has at least one pair of corresponding plaintext and ciphertext that they did not choose.
+The adversary knows the context or meaning of the plaintext.
+The adversary does not have access to the system and cannot generate more pairs of plain and ciphertext; they must work only with what they have.
+
+
+\begin{asu}
+The adversary knows the system.
+\end{asu}
+
+\begin{asu} The adversary has one ciphertext and a corresponding ciphertext.
+\end{asu}
+
+\textbf{Goal:} The adversary’s job is then to determine the decryption key.
+
+
+\begin{exmp}
+
+Eve has heard a conversation between Alice and Bob and knows that they will meet each other 'next Monday at 2pm'.
+This particular conversation that Eve overheard is encrypted and Eve has the ciphertext and she knows what was said so she has the plaintext. 
+So Eve knows somewhere in the ciphertext is some string corresponding to 'next Monday at 2pm'. 
+Eve can then use that she knows this string to decode some portion of the ciphertext and from there try to deduce the secret key. 
+\end{exmp}
+
+\subsubsection*{Specific Examples}
+
+
+\begin{exmp}
+    \begin{itemize}
+        \item Cesar Ciphers
+        \item The Polish Break of the Enigma Machine
+        \item The Bletchley Park Break of the Enigma Machine
+        \item Old versions of PKZIP encrypted with AES
+    \end{itemize}
+\end{exmp}
+
+
+\subsection{Chosen Plaintext Attacks (CPA)}
+
+\subsubsection*{Chosen Plaintext Attack I (Batch Chosen Plaintext Attack)}
+
+\begin{asu}
+    The adversary knows the system.
+\end{asu}
+
+\begin{asu}
+The adversary has temporary access to the encryption mechanism containing the key.
+\end{asu}
+
+\textbf{Goal:} 
+
+For the time the adversary has access to the mechanism they must choose plaintexts, construct the corresponding ciphertexts and deduce the decryption key somewhere in this or after this process.
+
+
+
+\subsubsection*{Chosen Plaintext Attack II (Adaptive Chosen Plaintext Attack)}
+
+\begin{asu}
+The adversary knows the system.
+\end{asu}
+
+\begin{asu}
+The adversary has unlimited access to the encryption mechanism containing the key.
+\end{asu}
+
+\textbf{Goal:} 
+
+The adversary can then choose plaintexts, see what the system returns, intelligently decide upon and submit more plaintexts to the system and use the constructed corresponding ciphertexts to deduce the secret key (trial and error).
+
+\begin{exmp}
+
+A very badly designed email service for some company provides encryption of messages, however it only generates one key per branch.
+
+Eve knows that Alice and Bob work at a particular branch of a company gets a job at the company transfers to that branch. 
+
+Eve uses the same email service sends email with content she chooses through the service (perhaps to herself BCCing or CCing herself it doesn’t matter, Eve chooses the content), Eve then analyzes the ciphertexts of the emails she sent deduces the secret key and then proceeds to decrypt messages belonging to Alice and Bob. 
+\end{exmp}
+
+
+\subsection{Chosen Ciphertext Attacks (CCA)}
+
+
+
+\subsubsection*{Chosen Ciphertext Attack I (Lunchtime Attack)}
+
+\begin{asu}
+\label{am:a1}
+    
+The adversary knows the system.
+\end{asu}
+
+\begin{asu}
+The adversary has temporary access to the decryption mechanism containing the key.
+\end{asu}
+
+\begin{asu}
+The adversary has one or more ciphertexts which correspond to this key. 
+\end{asu}
+
+
+\textbf{Goal:} The job of the adversary is generate the plaintext corresponding to the ciphertexts (easily done), and deduce the key.
+
+\begin{exmp}
+
+Eve has acquired some  encrypted messages sent from Bob to Alice.
+She has gained access to Bob’s computer (the decryption oracle) while Bob is at lunch.
+Eve get’s access to Bob’s computer while he is at lunch and decrypts the set of encrypted messages.
+Eve then uses the ciphertexts and plaintexts to deduce the secret key.
+\end{exmp}
+
+\subsubsection*{Chosen Ciphertext Attack II (Adaptive Chosen Ciphertexts Attack)}
+
+\begin{asu}
+The adversary knows the system.
+\end{asu}
+
+
+\begin{asu}
+The adversary has unlimited access to the decryption mechanism containing the key.
+\end{asu}
+
+\begin{asu}
+The adversary has one or more ciphertexts which correspond to this key, and can now generate more whenever they choose.
+\end{asu}
+
+
+\textbf{Goal:} The job of the adversary is to generate the plaintext corresponding to the ciphertexts (easily done), use the information to intelligently choose more plaintexts to generate ciphertexts and in this process deduce the key.

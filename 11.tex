@@ -1,0 +1,220 @@
+\section{Fully Homomorphic Encryption} 
+
+An added benefit of Lattice-based schemes is the potential of providing cryptosystems equiped with Fully Homomorphic Encryption (FHE).
+
+Fully Homomorphic Encryption is best informally explained by a usecase in the context of web searches. 
+
+\begin{exmp}
+    
+    Suppose Bob query's a search engine for content which may have a sensitive context. 
+    Currently Bob's available set of protective actions consist of a limited, complicated\footnote{to erase his browsing history, use a vpn (I am not including Tor or anonymizing services in this example), remove all scripts and applets, enable anonymous browsing mode in the browser of his choice, cross his fingers and hope the search engine or his ISP will not find him interesting (additionally, hope that his anonymous browser has patched it's `super cookie' tendencies).}, and non-optimal (or fool proof) proceedure for minimizing risk while searching. Should his search engine decide it would like to analyze, sell, or make use of Bob's search data, Bob has no choice in how, when, or why his data will be used. 
+    
+    However, if Bob had a computer which operated not on ordinary binary bits but encrypted bits instead, he might have some small chance that his sensitive data remained secure.
+    This is one example of a possible use of Fully Homomorphic Encryption.
+    If Bob was able to use an FHE system his footprint would be much simpler.
+    Bob only needs to encrypt his query, send it to the search engine, and recieve his results.
+    The search engine only would see something was searched for, and some result was produced. It would not see what Bob looked for, at which results he decided to look more closely, and which results he saved or discarded. 
+\end{exmp}
+
+    
+In general, the problem which FHE solves is only slightly different than that of Public-key. We want to take our encrypted data, send it to an unauthorized party for processing, and receive the same results we would get if we had never encrypted at all.
+
+
+The ability to send and process encrypted data as if it had not been encrypted at all is made possible by the use of simultaneous homomorphisms.
+
+\begin{defn}{Homorphism (informal)}
+    Informally, a homomorphism is a mapping between two objects which preserves some specified structure. Not all structures of an object must be preserved under this mapping.
+    
+\end{defn}
+
+
+\begin{defn}{Homomorphism of Rings}
+    
+    Let $\mathcal{R}$ and $\mathcal{S}$ be rings, then $f: \mathcal{R} \rightarrow \mathcal{S}$ is a homomorphism of rings if for all $a,b \in \mathcal{R}$ the following conditions hold:
+    
+    \begin{enumerate}
+        \item $f(a+b) = f(a)+f(b)$,
+        \item $f(ab)=f(a)f(b)$, and
+        \item For an identity element $e$ we have that $f(e_{\mathcal{R}}) = e_{\mathcal{S}}$.
+    \end{enumerate}
+    
+\end{defn}
+
+\begin{nt}
+    The definition of a ring implies the existence of additive inverses and additive identity so these conditions need not be explicitly specified in the above definition for a homomorphism.\footnote{See Appendix G for basics of rings.}
+\end{nt}
+
+
+You might ask:
+
+\textit{Why is FHE `special'? If we've had homomorphisms in our crypto for ages!}
+
+
+
+    
+    
+    
+    
+
+
+\subsection{Homomorphic Properties of Cryptographic Schemes} 
+
+It is true that many classical public key cryptography methods have a homomorphic property, this property says if add two things together then their sum contains information about those two things.
+That is, they use successive operations of addition, multiplication, etc. to create ciphertext. 
+
+The keyword being \emph{successive} operations.
+
+In the context of cryptography (since 2009) we call these schemes \emph{Partially Homomorphic}. 
+
+Unpadded RSA has this particular homomorphic property. That is, if we take two RSA messages (ciphertext) which have been encrypted with unpadded RSA, and we multiply them together, when we decrypted them we will find that this product contains the two original ciphertexts as subgroups, the ciphertexts have been embedded in their product. 
+
+The embedding the homomorphic property made possible in unpadded RSA is of course why we do not use unpadded RSA. We need two more security definitions to understand what FHE is, as well as what it attempts to provide.
+
+
+\subsection{Malleability Avoidance}
+
+In most classical cryptosystems great care has been taken in avoiding malleability, a property which comes as a byproduct of homomorphic functions. 
+Consider the following definitions and examples which show why this avoidance was necessary.
+
+
+\begin{defn}{Malleable Encryption}
+    
+    If $c'$ is a similar ciphertext for $c$. That means if $c$ can be transformed into some other $c'$ such that whenever we decrypt both $c$ and $c'$ we recieve either the same or a closely related plaintext, $f^{-1}(c)= f(m) = f^{-1}(c')$. 
+    
+    That is, a cryptosystem is called \emph{malleable} if when we know $f$, it is posible to take some ciphertext $c$ and modify it to a new $c'$ then we have modified the message $m$ to one of our own choosing, without having to decrypt $m$ in the first place.
+\end{defn}
+
+\begin{nt}
+    An important property to notice in the definition for malleability is that a cryptosystem (such as unpadded RSA) is still considered to be secure from CPA, CCAI, and semantically.
+    The adversary did not learn any information about the plaintext of the message, they did not need to.
+\end{nt}
+
+When might this property become a liability for a scheme?
+
+\begin{exmp}
+    Suppose Alice sends a message to Bob telling him to meet her at the deli at five oclock. If Eve would prefer Bob be somewhere else or simply not be at the deli at the same time as Alice she would only need to alter the ciphertext in a way that changed the time or place. Eve wouldn't need to know the contents of the message to choose either.
+\end{exmp}
+
+Another more practical example would be in terms of bank transfers.
+
+\begin{exmp}
+    Suppose Bob sends Alice a bank transfer for 50\$. 
+    Eve only needs to intercept a bank transfer until she aquires a ciphertext she can manipulate. 
+    Eve may then (if the banks cryptosystem is malleable), transform the ciphertext to decrypt into an amount she would like, say 5000\$, then redirect the money to an account of her own choosing. 
+    
+    Eve does not need to know how much the orginal transfer was made out for, who it was directed to, or who sent it to begin with; she only needs access to a manipulatable ciphertext.
+\end{exmp}
+
+We now can clearly see why cryptographers might want to go out of their way to avoid this particular property. This unfortunate property enabled by homomorphisms leads us to the following definition:
+
+\begin{defn}{Plaintext Awareness}
+    
+    A given cryptosystem is considered to be \emph{plaintext aware} if it is infeasible for an adversary to create a valid ciphertext without knowing the corresponding plaintext. \cite{Bel1995}
+\end{defn}
+
+The examples above hint at when this definition might imply the security of a cryptosystem, but consider the following senario. 
+
+If Bob takes his message and manually using a cesar cipher transforms his plaintext into ciphertext he is aware of not only the content of his message, but its correspondence the ciphertext (he knows the shift). However, many modern cryptosystems do not require the sender to know anything at all about the plaintext.
+
+To use the example of unpadded RSA again; in RSA the plaintext and corresponding ciphertext are both taken modulo $n$; so unpadded RSA is not plaintext aware. Meaning, a valid ciphertext can be found simply by picking some number modulo $n$. 
+
+
+On the other hand, if a cryptosystem is plaintext aware. Then the cryptosystem is both semantically secure and secure from any chosen-ciphertext attacks (CCAI and CCAII). Plaintext awareness is a very strong condition for the security of a given cryptosystem since it does not permit the adversary to find any information about a plaintext from its encrypted form they did not already know. 
+
+In fact, any cryptosystem which is secure against the CCAII attack model is by definition a \emph{non-malleable} cryptosystem.
+
+\subsection{Malleable on Purpose?}
+
+Not all cryptosystems avoid malleability; some cryptosystems exploit the property in performing their primary functions. Indeed, Fully Homomorphic Encryption schemes exploit malleability by using the fact that such systems permit the manipulation of ciphertexts without ever knowing the contents of the plaintext. 
+
+The homomorphisms used by Fully Homomorphic Encryption schemes allow two distinct operations to be performed not in succession but in tandem. Meaning, FHE schemes are not limited to a single operation or more operations which are performed sucessively, they can simultaneously compute arbitrary operations. 
+
+By design FHE schemes are malleable; in this case the property allows operations to be performed on ciphertext as if it were plaintext returning the same result as if the operations had been performed on plaintext.
+
+\subsection{Operations on Arbitrary Circuits}
+
+All computers operate by using trillions upon trillions of boolean circuits. Boolean circuits are special cases of propositional formulas, truth tables, where the only output ever given by the system is either yes or no; in computer terms zero or one. 
+
+Boolean circuits have three basic functions from which the rest can be derived, they are AND, OR, and NOT. You can combine these two of functions to get a total set of sixteen different boolean functions. Engineers have been using these functions for ages, but cryptographers were left with functions defined for either single operations, or multiple operations which could only be performed in succession. 
+
+The concept of Fully Homomorphic Encryption, first titled \emph{privacy homomorphisms}, was proposed by Rivest in 1978\cite{Riv1978} following the release of RSA. Though many attempts were made to create such a scheme not a single construction was successful until 2009 when Craig Gentry described a cryptosystem defined over ideal lattices in his PhD Thesis\cite{Gen2009}. 
+
+Before we jump into a description of Gentry's scheme we need to understand what it means for a cryptosystem to be capable of evaluating two or more operations simultaneously.
+
+As stated above all electronic devices perform operations on two or more Boolean functions on the set $\{0,1\}$, representing the state of a circuit being `on' or `off'. However, in order to avoid malleability cryptographic schemes usually removed the homomorphic properties endowed by their functions, this meant simultaneous evaluation on two or more operations was not feasible to construct without a significant loss in security. 
+
+\begin{nt}
+    FHE schemes are malleable by design; therefore, while they do meet the lower bound of being semantically secure, the semantic property for security is not sufficient condition to shield most modern cryptographic schemes from attack; this bound is provided by the adaptive chosen-ciphertext attack (CCAII) model. FHE schemes by definition are only capable of providing at most security in the CCAI attack model. 
+\begin{nt}
+    
+Cryptographers for the most part during the past three decades had to remain content with creating schemes specifically designed to ingest particular types of input and perform a specialized type of function. But Rivest had shown the dream of cryptographers was on par with that of engineers, to create systems which could operate over arbitrary circuits as any other device, with a key exception. The exception being that fundamental units these circuits operated on were not ordinary bits, but cryptographic bits.
+
+
+
+A computer which could evaluate arbitrary circuits over encrypted bits can perform any function of one which operates on standard bits. For example, if you were to manage your accounts on a typical computer you would need to know that the connection to your bank, storage method used of your records, the personell allowed to perform additional calculations, etc all met some minimum level of security. If you wanted to manage your accounts with a system operating on cryptographic bits you could simply encrypt your records and send them off to be processed 
+
+
+
+
+\subsection{Gentry's Fully Homomorphic Encryption Scheme}
+
+\subsubsection{Overview of Gentry's Method}
+
+\begin{enumerate}
+	\item Construct an encryption scheme which can evaluate arbitrary circuits.
+	\item Describe a public key encryption system using ideal lattices; we call this scheme a Semi Homomorphic Encryption scheme (SHE).
+	\item Modify the SHE scheme constructed in step 2 by reducing the depth where the scheme evaluates a circuit correctly so that it will be logarithmic with respect to the dimension of the lattice for its decryption circuit. 
+\end{enumerate}
+
+\begin{nt}{On Step 1:} 
+	For step one it is sufficient to construct an encryption scheme which is capable of evaluating slight augmentations of its own decryption circuit.
+\end{nt}
+
+\begin{nt}{On Step 2:}
+	To describe a SHE scheme defined over ideal lattices note that:
+		\begin{itemize}
+			\item Algorithms for lattice-based schemes typically have low circuit complexity, which is dominated by an inner product operation in the \textbf{NC} complexity class.
+			\item Ideal lattices are the ideals of a polynomial ring with a lattice representation; this homomorphism provides the additive and multiplicative properties needed in order to evaluate arbitrary circuits.
+        \end{itemize}
+\end{nt}
+
+\begin{nt}{On Step 3:}
+
+Reducing the depth of the decryption circuit, takes the scheme to a point where bootstrapping may now occur, without reducing the depth the scheme can evaluate circuits.
+
+The bootstrap is accomplished by allowing the encryption function to start the decryption process which reduces the work of the decryption function. 
+\end{nt}
+
+
+\subsection{FHE Pseudocode}
+
+We start with a SHE scheme, and two functions $f_{\wedge}$ and $f_{\vee}$, for  $x,y \in \{0,1\}$.
+
+Define the encryption function homomorphically:
+
+\[Enc(x \vee y) = f_{\vee}(Enc(x),Enc(y))\]
+
+And,
+
+\[Enc(x \wedge y) = f_{\wedge}(Enc(x),Enc(y))\]
+
+The SHE cryptosystem consists of probilistic polynomial time functions, $Gen, Enc, Dec, Eval$.
+
+The key pair contains $(p_{k}, s_{k}, ev_{k})$, where $p_{k}$ is a public encryption key, $s_{k}$ is the usual private key decryption key, and where $ev_{k}$ is a public evaluation key.
+
+Key Generation proceeds as follows:
+
+\[(p_{k},s_{k},ev_{k}) \leftarrow SHE.Gen(1^{\lambda})\]
+
+where $\lambda$ is a security parameter. 
+
+
+Let $c$ be a ciphertext, $\mu \in \{0,1\}^{1}$, and $r$ is a randomizer, then we make the first encryption in the following way:
+
+\[c \leftarrow SHE.Enc_{p_{k}}(\mu,r)\] 
+
+
+The first decryption 
+
+
+

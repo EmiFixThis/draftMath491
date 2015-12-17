@@ -1,0 +1,61 @@
+\select@language {american}
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}
+\contentsline {section}{\numberline {2}Notation}{4}{section.2}
+\contentsline {section}{\numberline {3}Another Note}{4}{section.3}
+\contentsline {section}{\numberline {4}Introductory Cryptographic Terminology and Notation}{5}{section.4}
+\contentsline {subsection}{\numberline {4.1}Basic Communications Channels}{5}{subsection.4.1}
+\contentsline {subsection}{\numberline {4.2}Asymmetric and Symmetric Key Schemes}{5}{subsection.4.2}
+\contentsline {subsection}{\numberline {4.3}Complexity and Cryptography}{7}{subsection.4.3}
+\contentsline {subsection}{\numberline {4.4}Formal Definitions of Asymmetric \& Symmetric Cryptography}{7}{subsection.4.4}
+\contentsline {subsubsection}{\numberline {4.4.1}Symmetric-key Cryptography}{7}{subsubsection.4.4.1}
+\contentsline {subsubsection}{\numberline {4.4.2}Asymmetric Key Cryptography}{10}{subsubsection.4.4.2}
+\contentsline {section}{\numberline {5}Semantic Security: Defining Security with Games}{12}{section.5}
+\contentsline {subsection}{\numberline {5.1}Goldwasser \& Micali's: Mental Poker and Partial Information}{12}{subsection.5.1}
+\contentsline {subsection}{\numberline {5.2}Weaknesses in the Assumptions of RSA}{12}{subsection.5.2}
+\contentsline {subsection}{\numberline {5.3}`Provable' Security}{15}{subsection.5.3}
+\contentsline {subsubsection}{\numberline {5.3.1}Mathematical Proofs vs. Security Proofs}{17}{subsubsection.5.3.1}
+\contentsline {section}{\numberline {6}Attack Models}{19}{section.6}
+\contentsline {subsection}{\numberline {6.1}Known Plaintext Attack (KPA)}{19}{subsection.6.1}
+\contentsline {subsection}{\numberline {6.2}Chosen Plaintext Attacks (CPA)}{19}{subsection.6.2}
+\contentsline {subsection}{\numberline {6.3}Chosen Ciphertext Attacks (CCA)}{20}{subsection.6.3}
+\contentsline {section}{\numberline {7}Complexity and Cryptography}{22}{section.7}
+\contentsline {subsection}{\numberline {7.1}Computational Problems}{22}{subsection.7.1}
+\contentsline {subsection}{\numberline {7.2}Complexity Issues}{26}{subsection.7.2}
+\contentsline {subsubsection}{\numberline {7.2.1}Hardness Assumptions}{28}{subsubsection.7.2.1}
+\contentsline {section}{\numberline {8}Quantum vs. Classical Cryptography}{31}{section.8}
+\contentsline {subsection}{\numberline {8.1}Basic Definitions in Quantum Computing}{32}{subsection.8.1}
+\contentsline {subsection}{\numberline {8.2}Shor's Algorithm}{34}{subsection.8.2}
+\contentsline {subsection}{\numberline {8.3}Grover's Algorithm}{37}{subsection.8.3}
+\contentsline {subsection}{\numberline {8.4}Grover's Algorithm}{38}{subsection.8.4}
+\contentsline {section}{\numberline {9}Basic Lattice Concepts}{39}{section.9}
+\contentsline {subsection}{\numberline {9.1}Short Integer Solution (SIS)}{40}{subsection.9.1}
+\contentsline {subsection}{\numberline {9.2}Learning with Parity (LWP)}{40}{subsection.9.2}
+\contentsline {subsection}{\numberline {9.3}Noisy Learning with Parity}{41}{subsection.9.3}
+\contentsline {subsection}{\numberline {9.4}Learning with Errors (LWE)}{41}{subsection.9.4}
+\contentsline {subsection}{\numberline {9.5}Ring-LWE (RLWE)}{42}{subsection.9.5}
+\contentsline {subsection}{\numberline {9.6}IR-LWE}{43}{subsection.9.6}
+\contentsline {section}{\numberline {10}Post-quantum Cryptography}{44}{section.10}
+\contentsline {section}{\numberline {11}Lattice-based Cryptography (LBC)}{45}{section.11}
+\contentsline {section}{\numberline {12}Ideal Lattice-based Cryptography}{46}{section.12}
+\contentsline {subsection}{\numberline {12.1}Ideal Ring Lattice Cryptosystems}{46}{subsection.12.1}
+\contentsline {subsection}{\numberline {12.2}Principal Ideal Lattice Insecurities}{46}{subsection.12.2}
+\contentsline {section}{\numberline {13}Fully Homomorphic Encryption}{48}{section.13}
+\contentsline {subsection}{\numberline {13.1}Homomorphic Properties of Cryptographic Schemes}{49}{subsection.13.1}
+\contentsline {subsection}{\numberline {13.2}Malleability Avoidance}{50}{subsection.13.2}
+\contentsline {subsection}{\numberline {13.3}Malleable on Purpose?}{51}{subsection.13.3}
+\contentsline {subsection}{\numberline {13.4}Operations on Arbitrary Circuits}{52}{subsection.13.4}
+\contentsline {subsection}{\numberline {13.5}Gentry's Fully Homomorphic Encryption Scheme}{53}{subsection.13.5}
+\contentsline {subsubsection}{\numberline {13.5.1}Overview of Gentry's Method}{53}{subsubsection.13.5.1}
+\contentsline {subsection}{\numberline {13.6}FHE Pseudocode}{54}{subsection.13.6}
+\contentsline {section}{\numberline {14}Counterexamples Win Out}{56}{section.14}
+\contentsline {section}{\numberline {15}Soliloquy Construction}{58}{section.15}
+\contentsline {subsection}{\numberline {15.1}Encryption \& Decryption}{59}{subsection.15.1}
+\contentsline {subsubsection}{\numberline {15.1.1}Encryption}{59}{subsubsection.15.1.1}
+\contentsline {subsubsection}{\numberline {15.1.2}Decryption}{60}{subsubsection.15.1.2}
+\contentsline {subsection}{\numberline {15.2}Cramer et al. Classical Solution}{61}{subsection.15.2}
+\contentsline {section}{\numberline {16}Appendix A: Gauss' Circle Problem}{62}{section.16}
+\contentsline {section}{\numberline {17}Appendix B: Base Security Objectives}{64}{section.17}
+\contentsline {subsection}{\numberline {17.1}Derived Security Objectives}{64}{subsection.17.1}
+\contentsline {section}{\numberline {18}Appendix D: Time Complexity}{67}{section.18}
+\contentsline {section}{\numberline {19}Appendix E: Lattices Laws}{69}{section.19}
+\contentsline {section}{\numberline {20}Appendix G: Basic Definitions for Rings}{72}{section.20}

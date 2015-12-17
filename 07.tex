@@ -1,0 +1,54 @@
+The following table shows a few examples of cryptosystems which can be solved using Shor's algorithm, we refer to them as quantum unsafe, likewise if a problem seems to provide some degree of security against attack by a general purpose quantum computer we refer to it as \emph{quantum safe}.
+
+
+Any sufficiently large general purpose quantum computer can `easily' solve the mathematical problems below using Shor's or another quantum algorithm. 
+
+\begin{center}
+\begin{table}
+\begin{tabularx}{300pt}{|X|X|} \hline
+        	\textbf{Mathematical Problem} & \textbf{Cryptographic Scheme} \\ \hline
+        	Integer Factorization & RSA \\ \hline
+        	Discrete Logarithm & Diffie-Hellman Protocol \\ \hline
+        	& The Digital Signature Algorithm (DSA) \\ \hline
+        	& ElGamal (PGP) \\ \hline
+        	Elliptic Curve Discrete Logarithm & Elliptic Curve Diffie-Hellman (ECDH) \\ \hline
+       	& Elliptic Curve Digital Signature Algorithm \\ \hline
+\end{tabularx}
+\caption{Classical Algorithms Susceptible to Quantum Attack}
+\label{tb:classalgo}
+\end{table}
+\end{center} 
+
+\bigskip
+    
+\begin{center}
+\begin{table}
+\caption{Efffect of Quantum Computing on Current Cryptosystems}
+\begin{tabularx}{300pt}{|X|X|} \hline
+\textbf{Survive} & \textbf{Die} \\ \hline
+    Merkle hash-tree \\ PKC signature Scheme & DSA \\ \hline
+    McEliece hidden-Goppa-code \\ PKC Encryption Scheme & ECDSA \\ \hline
+    Lattice-based Cryptography \\ (NTRU) & EDD (n general) \\ \hline
+    Multivariate Quadratic Equations \\ (Patarin HFE^{v-} PKC Sig scheme) & HECC (in general) \\ \hline
+    Secret Key Crypto \\ Rijndael (AES) & Buchmann-Williams \\ \hline
+    & Class groups in general \\ \hline
+\end{tabularx}
+\label{tb:pq}
+\end{table}
+\end{center}
+
+\bigskip    
+\subsection{Grover's Algorithm}
+
+
+Grover’s algorithm is a probabilistic quantum search algorithm which is able to find the unique input of a\gls{black box} function $f$, which maps to a unique output in $\mathcal{O}(N^{1/2})$ calculations, 
+where $N = |Dom(f)|$. 
+It was shown to be optimal by \cite{Ben1997}, with only $\mathcal{O}(N^{1/2})$ minimal number of evaluations required to find a solution. Despite that Grover’s is a probabilistic algorithm the number of evaluations expected before a solution is found is constant and not dependent upon $N$. 
+
+Grover's only speeds up the computation of a black box function only quadratically. For large enough domains, $N$ is fast enough to allow brute force solutions of 128 bit symmetric keys in approximately $2^{64}$ calculations, 256 bit in $2^{128}$. 
+
+Since Grover’s is a search algorithm (usually defined for databases) it is possible to consider the input and output values of $f$ as corresponding database entries and `search’ for one or more $x$ values to satisfy a given $y$ value. That is, we can think of Grover’s as performing an inversion on $y=f(x)$ and returning the correct $x$. 
+
+\input{groverdia}
+
+	

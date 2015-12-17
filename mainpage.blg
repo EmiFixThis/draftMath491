@@ -1,0 +1,137 @@
+This is BibTeX, Version 0.99d (TeX Live 2015)
+Capacity: max_strings=35307, hash_size=35307, hash_prime=30011
+The top-level auxiliary file: mainpage.aux
+A level-1 auxiliary file: title.aux
+A level-1 auxiliary file: 01.aux
+A level-1 auxiliary file: 02.aux
+A level-1 auxiliary file: 03.aux
+A level-1 auxiliary file: 031.aux
+A level-1 auxiliary file: 04.aux
+A level-1 auxiliary file: 05.aux
+A level-1 auxiliary file: 06.aux
+A level-1 auxiliary file: 07.aux
+A level-1 auxiliary file: grovers.aux
+A level-1 auxiliary file: LLL.aux
+A level-1 auxiliary file: intLattices.aux
+A level-1 auxiliary file: 08.aux
+A level-1 auxiliary file: pqcrypto.aux
+A level-1 auxiliary file: 09.aux
+A level-1 auxiliary file: 10.aux
+A level-1 auxiliary file: 11.aux
+A level-1 auxiliary file: 12.aux
+A level-1 auxiliary file: 13.aux
+A level-1 auxiliary file: 14.aux
+A level-1 auxiliary file: A1.aux
+A level-1 auxiliary file: A2.aux
+A level-1 auxiliary file: A4.aux
+A level-1 auxiliary file: A5.aux
+A level-1 auxiliary file: A6.aux
+A level-1 auxiliary file: A7.aux
+A level-1 auxiliary file: A8.aux
+A level-1 auxiliary file: gates.aux
+The style file: amsplain.bst
+Database file #1: bibbed.bib
+Repeated entry---line 299 of file bibbed.bib
+ : @book{Mic2002
+ :              ,
+I'm skipping whatever remains of this entry
+Repeated entry---line 656 of file bibbed.bib
+ : @misc{Sgr2013
+ :              ,
+I'm skipping whatever remains of this entry
+Database file #2: figsbib.bib
+Warning--entry type for "Ben2011" isn't style-file defined
+--line 4 of file figsbib.bib
+Warning--I didn't find a database entry for "Bon1998"
+Warning--I didn't find a database entry for "Sho1997"
+Warning--I didn't find a database entry for "Gen20090"
+Warning--I didn't find a database entry for "Cra20150"
+Warning--I didn't find a database entry for "Cra15"
+Warning--I didn't find a database entry for "Bel1995"
+Warning--I didn't find a database entry for "Sta2015"
+Warning--I didn't find a database entry for "CAS2015"
+Warning--to sort, need author or key in Sma2010
+Warning--to sort, need author or key in Ber2009
+Warning--to sort, need author or key in Bra2013
+Warning--to sort, need author, editor, or key in Hof2014
+Warning--to sort, need author or key in Kil2010
+Warning--to sort, need author or key in Zon2012
+Warning--to sort, need author or key in Amb2004
+Warning--to sort, need author, editor, or key in Cat2001
+Warning--to sort, need author or key in Ngu2010
+Too many commas in name 1 of "Marten van Dijk, Craig Gentry, Shai Halevi, Vinod Vaikuntanathan" for entry Van2010
+while executing---line 1149 of file amsplain.bst
+Warning--missing author and editor in Cat2001
+Warning--missing author in Amb2004
+Warning--missing pages in Amb2004
+Warning--missing author in Ber2009
+Warning--missing author in Kil2010
+Warning--missing author in Sma2010
+Warning--missing author in Ngu2010
+Warning--missing pages in Ngu2010
+Warning--missing author in Zon2012
+Warning--missing journal name in Zon2012
+Warning--missing pages in Zon2012
+Warning--missing author in Bra2013
+Warning--missing pages in Bra2013
+Warning--missing author and editor in Hof2014
+Warning--missing journal name in Ajt1998
+Warning--missing pages in Ajt1998
+Warning--missing journal name in Bad2000
+Warning--missing year in Bad2000
+Warning--missing pages in Bad2000
+Warning--missing booktitle in Bel2009
+Warning--missing journal name in Bia2015
+Warning--missing pages in Bia2015
+Warning--can't use both volume and number if series info is missing
+in BibTeX entry type `inproceedings'
+Warning--missing pages in Kum2014
+Warning--missing pages in Lyu2013
+Too many commas in name 1 of "Marten van Dijk, Craig Gentry, Shai Halevi, Vinod Vaikuntanathan" for entry Van2010
+while executing---line 1233 of file amsplain.bst
+Warning--missing institution in Rab1979
+Warning--missing journal name in Rog2015
+Warning--missing pages in Rog2015
+Warning--missing pages in Sil2006
+You've used 81 entries,
+            2213 wiz_defined-function locations,
+            1045 strings with 15959 characters,
+and the built_in function-call counts, 25500 in all, are:
+= -- 2379
+> -- 849
+< -- 3
++ -- 356
+- -- 264
+* -- 1942
+:= -- 3773
+add.period$ -- 81
+call.type$ -- 81
+change.case$ -- 382
+chr.to.int$ -- 0
+cite$ -- 118
+duplicate$ -- 1223
+empty$ -- 2399
+format.name$ -- 264
+if$ -- 5593
+int.to.chr$ -- 0
+int.to.str$ -- 81
+missing$ -- 151
+newline$ -- 253
+num.names$ -- 139
+pop$ -- 567
+preamble$ -- 1
+purify$ -- 296
+quote$ -- 0
+skip$ -- 867
+stack$ -- 0
+substring$ -- 1692
+swap$ -- 319
+text.length$ -- 3
+text.prefix$ -- 0
+top$ -- 1
+type$ -- 315
+warning$ -- 38
+while$ -- 261
+width$ -- 83
+write$ -- 726
+(There were 4 error messages)

@@ -1,0 +1,46 @@
+\section{Complexity and Cryptography}
+	
+    
+    In computational complexity functions can be viewed as sets of questions, the solutions of a function can be seen as an answer to the question posed by a function.
+
+
+Problems (Questions) can used as input for algorithms which may confirm, deny, or even lie concerning the answers of a given question. We also may ask questions about the workings of the algorithm itself. We might be concerned with how the algorithm attempts to find a solution of a given problem. We can ask how efficiently the algorithm may (or may not) find a solution for a problem; we may want to know the amount of resources an algorithm requires as it attempts to find a solution. 
+
+
+We of course would like to know if even when given these resources if the algorithm will be able to find any solution to the problem at all. 
+    
+    
+\subsection{Computational Problems}
+
+	
+
+
+The set of all algorithms can be divided into two general types: deterministic, and nondeterministic. 
+
+\medskip
+
+\begin{defn}{Deterministic Algorithm}
+    A deterministic algorithm is one which always produces the same output for a particular input. More formally, a deterministic algorithm is a mathematical function which takes a particular but arbitrarily chosen element from it's domain (the set of all inputs for a function) and maps the element uniquely to an element in the functions codomain (the set of all outputs).
+\end{defn}
+\medskip
+
+In other words, a deterministic algorithm is one which always traverses the same path in computing an output for a given input, the result is that a particular input will always land on the same output.
+\medskip
+
+In contrast, an algorithm which is nondeterministic provides no guarantee that a particular input element will produce a unique output element. 
+
+\medskip
+\begin{defn}{Nondeterministic Algorithm}
+    A nondeterministic algorithm is a probabilistic algorithm which may produce different outputs each time it runs due to the fact the algorithm is permitted to make different choices during execution. The output the algorithm returns may be unique or it may not, a result of the dependence of the algorithm on a random number generator. 
+\end{defn}
+
+\medskip
+
+
+A nondeterministic algorithm may or may not travel the same path while it computes an output, it may have many more routes available to choose from than a deterministic algorithm. 
+
+
+Deterministic and nondeterministic algorithms have different uses stemming from their differences in output. A deterministic algorithm might be an ideal choice when the problem you want to solve is a well-defined mathematical function, say $f(x) =y$. However, if the problem may have multiple solutions each one ranging in `correctness', a nondeterministic algorithm may provide a more appropriate mechanism for finding these solutions. 
+
+
+An example of a problem which might be aided by a nondeterministic algorithm is a path selection problem, where the goal is to reach a particular destination, but along the way you might have to choose which direction you wish to go when you reach a crossroads. 

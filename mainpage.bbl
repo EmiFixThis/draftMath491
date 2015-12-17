@@ -1,0 +1,382 @@
+\providecommand{\bysame}{\leavevmode\hbox to3em{\hrulefill}\thinspace}
+\providecommand{\MR}{\relax\ifhmode\unskip\space\fi MR }
+% \MRhref is called by the amsart/book/proc definition of \MR.
+\providecommand{\MRhref}[2]{%
+  \href{http://www.ams.org/mathscinet-getitem?mr=#1}{#2}
+}
+\providecommand{\href}[2]{#2}
+\begin{thebibliography}{10}
+
+\bibitem{Cat2001}
+\emph{{Paillier's cryptosystem revisited}}, ACM, New York, New York, USA, nov
+  2001.
+
+\bibitem{Amb2004}
+\emph{{An Elementary Proof of the Quantum Adiabatic Theorem}}, arXiv.org
+  (2004).
+
+\bibitem{Ber2009}
+\emph{{Introduction to post-quantum cryptography}}, Post-quantum cryptography,
+  Springer, Berlin, Berlin, Heidelberg, 2009, pp.~1--14.
+
+\bibitem{Kil2010}
+\emph{Adaptive trapdoor functions and chosen-ciphertext security}, Advances in
+  Cryptology {\textendash} EUROCRYPT 2010, Springer, Berlin, 2010,
+  pp.~673--692.
+
+\bibitem{Sma2010}
+\emph{{Fully Homomorphic Encryption with Relatively Small Key and Ciphertext
+  Sizes}}, Public Key Cryptography {\textendash} PKC 2010, Springer Berlin
+  Heidelberg, Berlin, Heidelberg, may 2010, pp.~420--443.
+
+\bibitem{Ngu2010}
+\emph{{The LLL Algorithm}}, Information Security and (2010).
+
+\bibitem{Zon2012}
+\emph{{Some mathematical mysteries in lattices}},  (2012).
+
+\bibitem{Bra2013}
+\emph{Classical hardness of learning with errors}, arXiv.org (2013).
+
+\bibitem{Hof2014}
+\emph{{An introduction to mathematical cryptography}}, second ed.,
+  Undergraduate Texts in Mathematics, Springer, New York, New York, NY, 2014.
+
+\bibitem{Aba2007}
+Martin Abadi and Phillip Rogaway, \emph{Reconciling two views of cryptography
+  (the computational soundness of formal encryption)}, J. Cryptol. \textbf{20}
+  (2007), no.~3, 395--395.
+
+\bibitem{Ajt1996}
+M.~Ajtai, \emph{Generating hard instances of lattice problems (extended
+  abstract)}, Proceedings of the Twenty-eighth Annual ACM Symposium on Theory
+  of Computing (New York, NY, USA), STOC '96, ACM, 1996, pp.~99--108.
+
+\bibitem{Ajt1990}
+Mikl6s Ajtai, Janos Komlós, and Endre Szemerédi, \emph{Generating expanders
+  from two permutations}, A tribute to Paul Erdös, edited by A. Baker, B.
+  Bollobás \& A. Hajnal (1990), 1--12.
+
+\bibitem{Ajt1998}
+Miklos Ajtai, \emph{Worst-case complexity, average-case complexity and lattice
+  problems},  (1998).
+
+\bibitem{Ajt1997}
+Mikl\'{o}s Ajtai and Cynthia Dwork, \emph{A public-key cryptosystem with
+  worst-case/average-case equivalence}, Proceedings of the Twenty-ninth Annual
+  ACM Symposium on Theory of Computing (New York, NY, USA), STOC '97, ACM,
+  1997, pp.~284--293.
+
+\bibitem{App2010}
+Benny Applebaum, Boaz Barak, and Avi Wigderson, \emph{Public-key cryptography
+  from different assumptions}, Proceedings of the forty-second ACM symposium on
+  Theory of computing, ACM, 2010, pp.~171--180.
+
+\bibitem{App2009}
+Benny Applebaum, David Cash, Chris Peikert, and Amit Sahai, \emph{Fast
+  cryptographic primitives and circular-secure encryption based on hard
+  learning problems}, CRYPTO '09: Proceedings of the 29th Annual International
+  Cryptology Conference on Advances in Cryptology (Berlin, Heidelberg),
+  Springer-Verlag, 2009, pp.~595--618.
+
+\bibitem{Arm2013}
+Frederik Armknecht, Stefan Katzenbeisser, and Andreas Peter, \emph{Group
+  homomorphic encryption: Characterizations, impossibility results, and
+  applications}, Des. Codes Cryptography \textbf{67} (2013), no.~2, 209--232.
+
+\bibitem{Bad2000}
+Christian Badertscher, Christian Matt, Ueli Maurer, Phillip Rogaway, and Björn
+  Tackmann, \emph{Robust authenticated encryption and the limits of symmetric
+  cryptography⋆}.
+
+\bibitem{Bel1998}
+Mihir Bellare, Anand Desai, David Pointcheval, and Phillip Rogaway,
+  \emph{Relations among notions of security for public-key encryption schemes},
+  Advances in Cryptology—CRYPTO'98, Springer, 1998, pp.~26--45.
+
+\bibitem{Bel2009}
+Mihir Bellare, Thomas Ristenpart, Phillip Rogaway, and Till Stegers,
+  \emph{Selected areas in cryptography}, Springer-Verlag, Berlin, Heidelberg,
+  2009, pp.~295--312.
+
+\bibitem{Bel1993}
+Mihir Bellare and Phillip Rogaway, \emph{Random oracles are practical: A
+  paradigm for designing efficient protocols}, Proceedings of the 1st ACM
+  Conference on Computer and Communications Security (New York, NY, USA), CCS
+  '93, ACM, 1993, pp.~62--73.
+
+\bibitem{Ben1997}
+Charles~H. Bennett, Ethan Bernstein, Gilles Brassard, and Umesh Vazirani,
+  \emph{Strengths and weaknesses of quantum computing}, SIAM J. Comput.
+  \textbf{26} (1997), no.~5, 1510--1523.
+
+\bibitem{Ben2011}
+Jean-Christophe Benoist, \emph{algorithme de grover}.
+
+\bibitem{Bia2015}
+Jean-Fran{\c{c}}ois Biasse and Fang Song, \emph{On the quantum attacks against
+  schemes relying on the hardness of finding a short generator of an ideal in q
+  ($\zeta$pn)},  (2015).
+
+\bibitem{Bon998}
+Dan Boneh and Ramarathnam Venkatesan, \emph{Breaking rsa may not be equivalent
+  to factoring}, Advances in Cryptology—EUROCRYPT'98, Springer, 1998,
+  pp.~59--71.
+
+\bibitem{Bro2005}
+Daniel R.~L. Brown, \emph{Breaking rsa may be as difficult as factoring},
+  Cryptology ePrint Archive, Report 2005/380, 2005.
+
+\bibitem{Cai1997}
+Jin-Yi Cai and Ajay~P Nerurkar, \emph{An improved worst-case to average-case
+  connection for lattice problems}, focs, IEEE, 1997, p.~468.
+
+\bibitem{Cam2014}
+Peter Campbell, Michael Groves, and Dan Shepherd, \emph{Soliloquy: A cautionary
+  tale}, ETSI 2nd Quantum-Safe Crypto Workshop, 2014.
+
+\bibitem{Cra2015}
+Ronald Cramer, Léo Ducas, Chris Peikert, and Oded Regev, \emph{Recovering
+  short generators of principal ideals in cyclotomic rings}, 2015.
+
+\bibitem{Das2013}
+Angsuman Das, Sabyasachi Dutta, and Avishek Adhikari,
+  \emph{Indistinguishability against chosen ciphertext verification attack
+  revisited: The complete picture}, Provable Security, Springer, 2013,
+  pp.~104--120.
+
+\bibitem{Den2006}
+Alexander~W Dent, \emph{Fundamental problems in provable security and
+  cryptography}, Philosophical Transactions: Mathematical, Physical and
+  Engineering Sciences \textbf{364} (2006), no.~1849, 3215--3230.
+
+\bibitem{Gar2015}
+Stephan~Ramon Garcia, Trevor Hyde, and Bob Lutz, \emph{{Gauss's Hidden
+  Menagerie: From Cyclotomy to Supercharacters}}, Notices of the American
+  Mathematical Society \textbf{62} (2016), no.~01, 7--21.
+
+\bibitem{Gen2009}
+Craig Gentry, \emph{Fully homomorphic encryption using ideal lattices},
+  Proceedings of the Forty-first Annual ACM Symposium on Theory of Computing
+  (New York, NY, USA), STOC '09, ACM, 2009, pp.~169--178.
+
+\bibitem{Gol1996}
+Oded Goldreich, Shafi Goldwasser, and Shai Halevi, \emph{Collision-free hashing
+  from lattice problems}, Electronic Colloquium on Computational Complexity
+  (ECCC), vol.~3, 1996, pp.~236--241.
+
+\bibitem{Gol1982}
+Shafi Goldwasser and Silvio Micali, \emph{Probabilistic encryption /& how to
+  play mental poker keeping secret all partial information}, Proceedings of the
+  Fourteenth Annual ACM Symposium on Theory of Computing (New York, NY, USA),
+  STOC '82, ACM, 1982, pp.~365--377.
+
+\bibitem{Agr2012}
+Matthew Green, \emph{Poker is hard especially for cryptographers}, 2011.
+
+\bibitem{Sgr2013}
+\bysame, \emph{The many flaws of dual ec drbg}, Sep 2013.
+
+\bibitem{Jgr2015}
+\bysame, \emph{Hopefully the last post i’ll ever write on dual ec drbg}, Jan
+  2015.
+
+\bibitem{Hem2012}
+Brett Hemenway and Rafail Ostrovsky, \emph{On homomorphic encryption and
+  chosen-ciphertext security}, Public Key Cryptography--PKC 2012, Springer,
+  2012, pp.~52--65.
+
+\bibitem{Jia2009}
+Yali Jiang and Xiuling Ju, \emph{{Lattice-Based CCA-Secure Cryptosystem from
+  IBE System}}, vol.~2, IEEE, 2009.
+
+\bibitem{Kro2008}
+Daniel Kroening and Ofer Strichman, \emph{Decision procedures: an algorithmic
+  point of view}, Springer Science \& Business Media, 2008.
+
+\bibitem{Kum2014}
+V~Satish Kumar and V~Trilik Kumar, \emph{Securing data using fully homomorphic
+  encryption schemes over cloud computing}, Indexing Journal Indexing: Our
+  journal has recently joined International Database for Indexing with DOAJ,
+  Index Copernicus, Open J Gate, CAS, Google Scholar, WAME...
+  More{\guillemotright} (2014).
+
+\bibitem{Len1984}
+Arjen~K. Lenstra, \emph{Factorization of polynomials}, SIGSAM Bull. \textbf{18}
+  (1984), no.~2, 16--18.
+
+\bibitem{Lyu2013}
+Vadim Lyubashevsky, \emph{{On Ideal Lattices and Learning with Errors over
+  Rings}}, Journal of the Acm \textbf{60} (2013), no.~6.
+
+\bibitem{Lyu2010}
+Vadim Lyubashevsky, Chris Peikert, and Oded Regev, \emph{On ideal lattices and
+  learning with errors over rings}, Proceedings of the 29th Annual
+  International Conference on Theory and Applications of Cryptographic
+  Techniques (Berlin, Heidelberg), EUROCRYPT'10, Springer-Verlag, 2010,
+  pp.~1--23.
+
+\bibitem{Van2010}
+Shai Halevi Vinod~Vaikuntanathan Marten~van Dijk, Craig~Gentry, \emph{{Fully
+  Homomorphic Encryption over the Integers}}, Advances in Cryptology EUROCRYPT
+  2010 (Eurocrypt2010, ed.), 6110, vol. 2010, Springer Berlin Heidelberg,
+  Berlin, Heidelberg, may 2010, pp.~24--43.
+
+\bibitem{Mic2002}
+Daniele Micciancio, \emph{Improved cryptographic hash functions with
+  worst-case/average-case connection}, Proceedings of the thiry-fourth annual
+  ACM symposium on Theory of computing, ACM, 2002, pp.~609--618.
+
+\bibitem{Mic2015}
+Daniele Micciancio and Shafi Goldwasser, \emph{Complexity of lattice problems},
+  1st ed., A Cryptographic Perspective, Springer US, Boston, MA, 2002.
+
+\bibitem{Mic2012}
+Daniele Micciancio and Chris Peikert, \emph{Trapdoors for lattices: simpler,
+  tighter, faster, smaller}, EUROCRYPT'12: Proceedings of the 31st Annual
+  international conference on Theory and Applications of Cryptographic
+  Techniques (Berlin, Heidelberg), Springer-Verlag, 2012, pp.~700--718.
+
+\bibitem{Mic2007}
+Daniele Micciancio and Oded Regev, \emph{Worst-case to average-case reductions
+  based on gaussian measures}, SIAM Journal on Computing \textbf{37} (2007),
+  no.~1, 267--302.
+
+\bibitem{Oli2014}
+Tomás Oliveira~e Silva, Siegfried Herzog, and Silvio Pardi, \emph{Empirical
+  verification of the even goldbach conjecture and computation of prime gaps up
+  to 4⋅ 10$^1$⁸}, Mathematics of Computation \textbf{83} (2014), no.~288,
+  2033--2060.
+
+\bibitem{Pei2009}
+Chris Peikert, \emph{Some recent progress in lattice-based cryptography}, TCC
+  '09: Proceedings of the 6th Theory of Cryptography Conference on Theory of
+  Cryptography (Berlin, Heidelberg), Springer-Verlag, 2009, pp.~72--72.
+
+\bibitem{Pei2010}
+\bysame, \emph{Heuristics and rigor in lattice-based cryptography}, SCN'10:
+  Proceedings of the 7th international conference on Security and cryptography
+  for networks (Berlin, Heidelberg), Springer-Verlag, 2010, pp.~54--54.
+
+\bibitem{Pei2014}
+\bysame, \emph{Lattice cryptography for the internet}, Post-Quantum
+  Cryptography, Springer, 2014, pp.~197--219.
+
+\bibitem{Pei2015}
+\bysame, \emph{A decade of lattice cryptography}, 2015.
+
+\bibitem{Pei2007}
+Chris Peikert and Alon Rosen, \emph{Lattices that admit logarithmic worst-case
+  to average-case connection factors}, STOC '07: Proceedings of the
+  thirty-ninth annual ACM symposium on Theory of computing (New York, NY, USA),
+  ACM, 2007, pp.~478--487.
+
+\bibitem{Pei2008}
+Chris Peikert and Vinod Vaikuntanathan, \emph{Noninteractive statistical
+  zero-knowledge proofs for lattice problems}, CRYPTO 2008: Proceedings of the
+  28th Annual conference on Cryptology (Berlin, Heidelberg), Springer-Verlag,
+  2008, pp.~536--553.
+
+\bibitem{Pei2011}
+Chris Peikert and Brent Waters, \emph{Lossy trapdoor functions and their
+  applications}, SIAM J. Comput. \textbf{40} (2011), no.~6, 1803--1844.
+
+\bibitem{Pet2011}
+Christophe Petit, Jean-Jacques Quisquater, et~al., \emph{Rubik's for
+  cryptographers.}, IACR Cryptology ePrint Archive \textbf{2011} (2011), 638.
+
+\bibitem{Rab1979}
+M.~O. Rabin, \emph{Digitalized signatures and public-key functions as
+  intractable as factorization}, Tech. report, Cambridge, MA, USA, 1979.
+
+\bibitem{Reg2004}
+Oded Regev, \emph{New lattice-based cryptographic constructions}, J. ACM
+  \textbf{51} (2004), no.~6, 899--942.
+
+\bibitem{Reg2009}
+\bysame, \emph{On lattices, learning with errors, random linear codes, and
+  cryptography}, Journal of the Acm \textbf{56} (2009), no.~6, 34--40.
+
+\bibitem{Ris2007}
+Thomas Ristenpart and Phillip Rogaway, \emph{How to enrich the message space of
+  a cipher}, Proceedings of the 14th International Conference on Fast Software
+  Encryption (Berlin, Heidelberg), FSE'07, Springer-Verlag, 2007, pp.~101--118.
+
+\bibitem{Riv1978}
+Ronald~L Rivest, Adi Shamir, and Len Adleman, \emph{A method for obtaining
+  digital signatures and public-key cryptosystems}, Communications of the ACM
+  \textbf{21} (1978), no.~2, 120--126.
+
+\bibitem{Rog2004}
+P~Rogaway, \emph{On the role definitions in and beyond cryptography}, Advances
+  in Computer Science - Asian 2004, Proceedings \textbf{3321} (2004), no.~6,
+  13--32.
+
+\bibitem{Rog2015}
+Phillip Rogaway, \emph{The moral character of cryptographic work⋆},  (2015).
+
+\bibitem{Rog2012}
+Phillip Rogaway, Mark Wooding, and Haibin Zhang, \emph{The security of
+  ciphertext stealing}, Proceedings of the 19th International Conference on
+  Fast Software Encryption (Berlin, Heidelberg), FSE'12, Springer-Verlag, 2012,
+  pp.~180--195.
+
+\bibitem{Rot1997}
+Gian-Carlo Rota, \emph{The many lives of lattice theory}, Notices of the
+  American Mathematical Society \textbf{44} (1997), no.~11, 1440--1445.
+
+\bibitem{Ruc2010}
+Markus Rückert and Michael Schneider, \emph{Estimating the security of
+  lattice-based cryptosystems.}, IACR Cryptology ePrint Archive \textbf{2010}
+  (2010), 137.
+
+\bibitem{Sch1998}
+Bruce Schneier, \emph{Cryptographic design vulnerabilities}, Computer
+  \textbf{31} (1998), no.~9, 29--33.
+
+\bibitem{Sch2007}
+\bysame, \emph{The strange story of dual ec drbg}, Nov 2007.
+
+\bibitem{Sil2013}
+Alice Silverberg, \emph{Fully homomorphic encryption for mathematicians}, Women
+  in Numbers 2: Research Directions in Number Theory \textbf{606} (2013), 111.
+
+\bibitem{Sil2006}
+Joseph~H Silverman, \emph{An introduction to the theory of lattices and
+  applications to cryptography}, Computational Number Theory and Applications
+  to Cryptography, University of Wyoming, Jun (2006).
+
+\bibitem{Son2014}
+Fang Song, \emph{A note on quantum security for post-quantum cryptography},
+  IACR Cryptology … \textbf{8772} (2014), no.~Chapter 15, 246--265.
+
+\bibitem{Thr2015}
+Sophos, \emph{Threatsaurus - the a-z list of data security threats for
+  computers, networks and endusers}, 2015.
+
+\bibitem{Sta2010}
+Ryan Stanley, \emph{Soliloquy cryptographic primitive}, 2010.
+
+\bibitem{Ste2010}
+John Steinberger, \emph{Stam's collision resistance conjecture}, Advances in
+  Cryptology EUROCRYPT 2010, Springer Berlin Heidelberg, Berlin, Heidelberg,
+  may 2010, pp.~597--615.
+
+\bibitem{Str2015}
+Patrick Struck, \emph{On the difference between hardness and security: a
+  comparison of lattice-based signature schemes}, Bachelor thesis, TU
+  Darmstadt, June 2015.
+
+\bibitem{Syv2013}
+Paul Syverson, \emph{Why i'm not an entropist}, Springer Berlin Heidelberg,
+  Berlin, Heidelberg, 2013.
+
+\bibitem{Vid2013}
+T.~Vidick, \emph{Three-player entangled xor games are np-hard to approximate},
+  IEEE (2013), 766--775.
+
+\bibitem{War2015}
+Kathleen Ward and Phillip Rogaway, \emph{{When to hyphenate phrases such as
+  'Public Key'}}, Tech. report, University of California, Davis, December 2015.
+
+\end{thebibliography}

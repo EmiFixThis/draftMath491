@@ -1,0 +1,178 @@
+\section{Quantum vs. Classical Cryptography} 
+
+
+The question of if a quantum computer could prove to be more powerful than a classical one was first proposed by Richard Feynmann in 1982. Feynmann first wondered if quantum mechanics might provide a more power computing device than a classical device based on binary type bits. He then proposed the converse of his first question implicitly in 1986: \textit{`By using quantum mechanics can you compute more efficiently than on a classical computer?'} Feynmann, proceeded to formally define quantum Turing machines and quantum bits in order to investigate these questions further.
+
+
+The first example of a quantum computer is the D-Wave quantum annealing computer. The D-Wave is advertised as 
+\textit{`The world's first commercially available quantum computer'}. 
+ 
+In 2013 Google, NASA Ames, and the Universities Space Research Association collaborated in a purchase of a subclass of the quantum annealing computer called an adiabatic quantum computer.  
+
+However, D-Wave systems are not general purpose quantum computers, and were not created with problems such as integer factorization, and solutions to discrete logs in mind. The D-Wave systems were created as special purpose quantum computers to solve optimization problems which involve finding ground states of a classical Ising spin glass. 
+\todo{Update with Google info from Dec}
+
+In classical cryptography the problems which serve as mathematical basis for their constructions can all be efficiently \footnote{Efficient in this context means algorithmically solvable in polynomial time.} solved by quantum algorithms. 
+
+The first algorithm which could provide solutions for large integer factorization, and discrete logarithms was proved by Peter Shor in 1997 \cite{Sho1997}. Solutions for these two mathematical problems effectively destroy the RSA, Diffie-Hellman, and elliptic curve cryptosystems in such a way that a patch such as making the integer much larger in the RSA problem would not be any real or long term solution. 
+
+
+  
+Present quantum computers do not run most quantum algorithms. In particular, they do not run Shor’s. 
+
+\begin{nt}
+An `watershed' announcement is expected on Wednesday, December 8th, 2015 from Google and NASA concerning some quantum breakthrough.
+\end{nt}
+ 
+ 
+A general purpose quantum computer is one that is capable of carrying out a set of standard quantum operations in any order it is told.
+\footnote{There do not at this point in time exist any general purpose quantum computers, However this may not be true come Wednesday.} 
+
+ 
+With these developments in mind it would be very poor risk management to delay development of quantum resistant cryptosystems and assume the longer time frame. It is quite plausible that not all developments are within public knowledge. 
+
+
+\subsection{Basic Definitions in Quantum Computing}
+
+
+Below we give the basic definitions used in quantum computing which are relevant to cryptographic schemes. 
+
+Classical computers use binary bits as their fundamental unit, the value of a bit can only ever be 1 or 0. Binary bits are operated upon pair wise by Boolean logical connectives such as $\mathbf{AND, OR, NOT}$. Sequences of binary bits are manipulated by Boolean logic gates which operate in succession until an end state or computation has been completed.  
+
+
+In contrast, quantum computers have as fundamental units, quantum bits or \emph{qubits}. Sequences of qubits are operated upon by quantum logic gates, which simulate particular laws of quantum mechanics such as \emph{superposition} and \emph{entanglement}. The following table compares the states and descriptions of classical and quantum computers.
+
+
+\begin{table}
+\begin{center}
+\begin{tabularx}{400pt}{|c|c|X|} \hline 
+     & \textbf{Classical} & \textbf{Quantum} \\ \hline
+    \textbf{Number of Components} & n-components & n-components \\ \hline
+    \textbf{States} & 2 states & each state is a point in a $2^{n}$ dimensional vector space \\ \hline
+    \textbf{Complete State Description} & n-bits & $2^{n}-1 \in \mathbb{C}$ \\ \hline
+\end{tabularx}
+\caption{Classical vs. Quantum State Descriptors}
+\label{tbl:classvquantstate}
+\end{center}
+\end{table}
+
+
+
+\begin{nota}
+    For each of the $2^{n}$ possible positions of the components in a quantum computer, there exists a basis state of the vector space represented as:
+    \[ |011 \ldots 0 \rangle \]
+    where $|x \rangle$ denotes a pure quantum state.
+    (ket notation)
+\end{nota}
+
+
+\begin{prot}
+    The Hilbert space associated with the quantum system is the complex vector space with the $2^{n}$ states represented as basis vectors.
+\end{prot}
+
+
+\begin{prot}
+    The state of the system at any time $t$ is represented by a unit-length vector in Hilbert Space.
+\end{prot}
+
+
+\begin{nota}
+    Superposition of the state is represented by:
+    \[\sum_{i=0}^{2^{n}-1} a_{i} S_{i} : a_{i} \in \mathbb{C}\]
+    these are the amplitudes,
+    \[\sum_{i=0} |a_{i}| = 1, \] and each $S_{i}$ is a basis vector of the Hilbert space.
+\end{nota}
+
+
+\begin{asu}
+    Since multiplying the state vector by a unit-length complex phase makes no change in the behavior of the state, it only requires $2^{n} -1$ element of $\mathbb{C}$ to represent the complete state of the system.    
+\end{asu}
+
+
+\begin{table}
+\begin{center}
+\begin{tabularx}{250pt}{|X|X|} \hline
+    Classical Resources & Quantum Resources \\ \hline
+    Time & Time \\ \hline
+    Space & Space \\ \hline
+    & Precision \\ \hline
+\end{tabularx}
+\caption{Classical vs. Quantum Resource Comparisons}
+\label{tbl:classvquantresource}
+\end{center}
+\end{table}
+
+
+
+\begin{prot}    
+    A quantum computer must be able to make changes at will to the quantum states of objects. Inherently, the precision cannot be perfectly measured, i.e. the measurement contains some degree of error (has an error term). 
+    (That is it has some amount of imprecision).
+\end{prot}
+
+
+\begin{table}
+\begin{center}
+\begin{tabularx}{400pt}{|X|X|} \hline
+\textbf{Constant} & \textbf{Non-Constant} \\ \hline
+Constant degree of error means that the measure of precision does not depend on the size of the input & Non-constant degree of error means that for the input size the precision is permitted to grow in poly-log time \\ \hline
+ & Meaning if the number of bits of precision has a log input size for the growth rate then a quantum computer is more powerful than the classical \\ \hline
+ & The power result is due to the fact that, allowing a non-constant degree of precision does not \emph{`appear'} to confer any additional computational power \\ \hline
+ & Although allowing exponential growth may \\ \hline
+At the time of [\cite{Sho1997}] it was unknown \emph{HOW} to compute any functions in polynomial time on a quantum computer that could not also be computed in polynomial time on a classical computer using a random number generator &  \\ \hline
+\end{tabularx}
+\caption{Constant and Non-Constant Precision Comparisons}
+\label{tbl:constnon}
+\end{center}
+\end{table}
+
+
+
+\begin{prot}
+    If the device is measured with respect to this basis at any step the probability of seeing the basis state: $| S_{i} \rangle$ is $|a_{i}|^{2}$.    
+\end{prot}
+
+
+\begin{rem}
+    However, the act of measuring projects the state to the observed basis vector $|S_{i} \rangle$. Therefore, looking at the machine during computation invalidates the remainder of the computation.
+    (\emph{Schrodinger's cat})    
+\end{rem}
+
+
+
+Quantum computers have analogous forms of the oracles, Turing machines, and other devices used in computability theory for classical systems with slight modifications due to their nature. For instance, the description of a quantum Turing machine must include an error term which to account for the additional possible states of a qubit.
+
+
+\begin{nt}
+    If a quantum Turing machine is allowed a small probability of error then the quantum gates and quantum Turing machines can compute the same function in polynomial time. 
+    This implies that the class of functions which are computable in polynomial time is robust, with a small degree of error which is not dependent on the exact architecture of the quantum computer.
+\end{nt}
+
+
+\begin{table}
+\begin{center}
+\begin{tabularx}{250pt}{|X|X|} \hline
+    \textbf{Quantum Class} & \textbf{Classical Class Analog} \\ \hline
+    BQP & BPP \\ \hline
+    Bounded Error Probability & \\ \hline
+    Quantum Polynomial Time & \\ \hline
+\end{tabularx}
+\caption{Class Comparisons Between Quantum and Classical Systems}
+\label{tbl: classicvsquantaclass}
+\end{center}
+\end{table}
+
+
+
+\subsection{Shor's Algorithm}
+
+In 1997, Peter Shor described an algorithm that could easily decompose large integers into their prime factors in polynomial time with a high probability of success. This decomposition breaks cryptographic algorithms such as RSA. Shor also described an algorithm which solves the discrete logarithm problem in $\mathbb{F}_{p}^{\ast}$. There now exist variants of Shor's solution for the discrete log which can solve the elliptic curve discrete logarithm problem used in \emph{eliptic curve cryptography} as well, in polynomial time. 
+
+
+Recall the Fourier transform takes a complex function of time (a signal) and breaks it up into its components. The discrete Fourier transform operates similarly on samples which have been taken in discrete units of time; it uses the Poisson summation formula in order to produce a frequency which represents the continuous Fourier transform of the original function.
+
+
+The key to Shor's algorithm makes use of a quantum variant of the Fast Fourier Transform, this transformation can be found in polynomial time. The next step is to use the transformation on a particular superposition of quantum states and measure the system. The probability of observing a state is large enough if there exists a rational number $\frac{s}{t}$ which satisfies $\bigg \vert \frac{p}{q} - \frac{s}{r} < \frac{1}{2q} \bigg \vert$, where $r$ is the order of a number $a \mod{n}$ such that $0 < a < q$, and $| a \rangle$ is a state on which the transform operates. 
+
+
+Notably, Shor's algorithm is capable of solving all current methods typically used in classical cryptography with one exception. Shor's algorithm nor any other quantum or classical algorithm has yet to produce a solution for a worst-case problem defined over lattices. This of course does not imply no such solution can be found. 
+

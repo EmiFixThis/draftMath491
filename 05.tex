@@ -1,0 +1,253 @@
+A computational problem is one where finding a solution may be aided using a computer, that is one in which it would be impractical to just grab a scrap of paper and scratch out a solution. These types of problems are classified by the level of difficulty in finding a solution. 
+    
+
+The difficulty may be quantified in terms of resources, time, communication, or components an algorithm may use while it runs. This is called the \emph{complexity class} of the algorithm.
+
+
+In application, an instance of a problem may be given in terms of bit strings where the alphabet is binary, (i.e. the set $\{0,1\}$), hexadecimal, or some adjacency matrix. 
+
+When phrasing a theoretical problem for use in a computational problem, it is typical to define the concept generally; this enables the problem instances to be represented in a way which ensures it can be transformed between different choices of encodings in applications. 
+    
+    
+Computational problems typically fall into three basic representations: decisional, search, and promise, described below.
+
+
+       
+Decision problems are instances where a question can be answered positively or negatively. 
+
+For example, we might want to know if an element is a member of a set. If the element is in the set the algorithm returns yes, else it returns no.
+
+
+\begin{defn}{Decision Problem (informal)}
+    In a formal system, a decision problem is a question which can be answered as \emph{yes} or \emph{no}, depending on the input.
+\end{defn}
+
+
+
+\begin{defn}{Decision Problem}
+    Typically the set of outputs for an algorithm providing a set of solutions for a decision problem is defined to be the subset of all solutions for which the answer was positive, or for which the returned value is \emph{`yes'}.
+\end{defn}
+
+
+
+Decision problems in computational complexity can be further classified based on the level of difficulty (given in terms of resources, or some other value), and assuming the most efficient algorithm is used to find a solution for the problem instance. 
+
+
+In most cases it is possible to describe a solution for a decision problem, but impossible to construct an algorithm which can produce such a solution, these problems are called \emph{undecidable}. 
+
+
+
+\begin{defn}{Decidable Problem}
+    A decision problem $\mathcal{P}_{d}$ is decidable if it is a \emph{recursive} or computable set. In terms of algorithms, decidable refers to a problem which can be solved in a finite amount of time, correctly.
+\end{defn}
+
+
+
+\begin{defn}{Undecidable Problem}
+    A decision problem $\mathcal{P}_{d}$ is called undecidable if it's statement is neither provable nor refutable.
+\end{defn}
+
+
+
+It is often useful to know if a particular algorithm can be constructed or give a mathematical model of a particular algorithm, simulations such as these are usually defined over Turing machines. 
+Informally, a Turing machine is a mathematical model which is capable of simulating an algorithm. 
+
+
+
+The following theorem is helpful in describing the remaining representative problems, as well as subsequent content within this paper. 
+
+
+\begin{thm}{Church's Thesis (Strong Version)} 
+    Any physical computational device can be simulated by a Turing machine in polynomial time.
+\end{thm}
+
+
+\begin{summ}
+    Any computational device uses an amount of memory which grows linearly with respect to the computation.
+\end{summ}
+
+\smallskip
+In recursion theory, the case where a problem is classified as undecidable is measured by it's \emph{Turing degree}. 
+
+
+\begin{defn}{Turing Degree}
+    The Turing degree of an undecidable problem measures the \gls{noncomputability} in determining a solution.
+\end{defn}
+
+\smallskip
+\begin{exmp}
+    Decision problems are also used for optimization, or finding the \emph{best answer} for a given problem. 
+    There are many standardized methods describing transformation between optimization problems and decision problems; many can be constructed without a significant increase to the Turing degree.
+\end{exmp}
+
+
+
+
+
+A search problem is an algorithm which verifies the existence of some object. These algorithms are typically stated as Turing machines (informally a model which is capable of simulating an algorithm). 
+
+\begin{defn}{Search Problem}
+    Let $T$ be a turing machine, and $\mathcal{R}$ a binary relation between $x \sim y$.
+    $T$ solve $\mathcal{R}$ if:
+    
+    If given an $x$ there exists a $y$ such that $\mathcal{R}(x,y)$, then $T$ accepts $x$ as a member of $\mathcal{R}(x,y)$ and produces an element $z$ such that $\mathcal{R}(x,z)$. 
+    
+    If $T$ cannot find a $y$ when given an $x$ which satisfies the binary relation, $T$ rejects $x$ and halts
+\end{defn}    
+
+
+
+In other words, a search problem is one where an algorithm is not used, and a problem is not solved, but where a description of a solution to a problem is shown to exist, or not. 
+
+
+A search problem can provide a description of a solution to a given decision problem. In fact, for every search problem there is a decision problem which corresponds to it. 
+
+For example, a search problem could find that at least one element in a subset satisfies a particular binary relation, but since it only needs to find out if a particular kind of element exists it may stop after finding only one. 
+
+In contrast a decision problem compares all elements in the subset with the description given by the search function and returns a subset of all the elements which matched the description. 
+
+A search problem may be defined as a starting or end state, a transformation between states, or as a successor function.
+
+
+
+A promise problem is a general form of a decision problem which produces a more ambiguous output. 
+
+Where a decision problem does not exhaust the set of all possible solutions by answering each input in either the negative or affirmative a promise problem acts on the set of all possible solutions. The output of a promise algorithm for a particular input can tell you which subset a solution lies in, it may lie, or it may not answer at all. 
+
+In particular, if the solution for a given input is a member of the positive or negative subsets the promise problem outputs which subset it is a member of. However, if the input corresponds to a member which does not lie in either the positive or negative sets the promise problem may output anything at all or it may never produce an output (does not halt).
+
+
+
+\subsection{Complexity Issues}
+
+
+For nearly every classical cryptographic construction of the object is as follows:
+
+
+First, generate a specific instance of a problem and it's solution in the complexity class NP, such that it is reasonable to assume the problem is hard to solve; where hard to solve is meant in the worst-case.
+
+
+Take again as an example, the integer factorization problem and the RSA cryptosystem. 
+
+
+Let $k \in \mathcal{K}$ be a public key generated by a probabilistic key generation function $\mathbf{Gen}$, where $k$ is chosen randomly from a uniform distribution of the $\mathcal{K}$ (the keyspace). 
+  
+  \[ (m,k) \leftarrow \mathbf{Gen} \]
+  
+Let $m$ be an arbitrarily chosen element of the message-space $\mathcal{M}$, and let $c$ be the corresponding ciphertext of $\mathcal{C}$ for $m$. 
+  
+
+Choose $p,q \in \mathbb{P}$ (the set of primes), in a random way.
+  
+Construct the product $N=pq$, and define it to be the modulus.
+  
+If we have chosen $p$ and $q$ nicely, then we hope we will have a high-confidence which provides some assurance that $p$ and $q$ will not be $\varepsilon$ close (approximately equal).
+  
+That is, the product $pq=N$ does not give us $p,q$ both with $\varepsilon > 0$ close of $\sqrt{N}$, as this would make $N$ easily factorable into $p$ and $q$.
+  
+
+Next, choose $e$ such that 
+\[e \perp \phi{n}=\phi(p)\phi(q)=(p-1)(q-1)\], i.e. $e$ relatively prime to $\phi{n}$.
+ 
+
+The encryption function is given by: 
+ 
+  \[c \leftarrow \mathbf{Enc}_{k}(m) = m^{e}\mod{n}\]
+  
+The decryption function by: 
+  
+  \[ m \leftarrow \mathbf{Dec}_{k}(\mathbf{Enc}_{k}(m)) \]
+  
+
+We now have for every ciphertext element $c_{i} \in \mathcal{C} = m_{i}^{e} \mod{n}$: a public key $k = (e, m)$, we may then derive our private key by choosing an integer $d = (d,n)$ which satisfies $(ed-1)/ \phi{n}$. 
+  
+Then every message $m_{i} \equiv c_{i}^{d} \mod{n}.$
+  
+  
+
+The above example shows that security of RSA depends in some way, that neither $p$ nor $q$ will be approximately $\sqrt{N}$, if this condition turned out to be true then $N$ is called \emph{weakly composite}, or a weak composite. 
+
+However, the above condition being true would not be the only way for $p$ and $q$ to create a weak composite $N$. 
+
+
+We know that not all composites have an equally hard prime decomposition. In fact, not only are there primes of many different forms of prime that will always, (even just sometimes, and nearly always unexpectedly) create composite integers that will be efficiently and easily factorable; we don't even know all the ways or types of primes where a weak composite may occur. 
+
+Since we don't know all the forms of primes, or products of primes that will produce easily decomposable numbers, we can't  test for them in anyway that assures we've found a reasonable majority. 
+
+We want to believe these problems are hard to solve, but despite our best efforts we have no evidence that they really are. For instance, we would like to believe that RSA is \emph{at least as hard to solve} as the integer factorization problem, but we have no proof that this is true.
+
+
+Even more, didn't we say that the statement \emph{`hard to solve'} meant in the worst-case instance? In reality, many cryptographers have hoped choosing (or not choosing) primes of a certain type would ensure that $N$ would be hard to factor and even when the reasons a particular form of primes to removed from the set were more than reasonable, the system would still produce some other different type of prime which caused the scheme to fail.
+
+So how do we get away with assuming that integer factorization being hard, is at all a reasonable assumption to make? More generally how can we get away with any similar assumption which might be made for a given cryptosystem.
+
+
+\subsubsection{Hardness Assumptions}
+
+We define the three standard types of complexity problems: \emph{best-case, average-case}, and \emph{worst-case} known as \emph{hardness assumptions}. 
+
+
+\begin{defn}{Best-case}
+    Refers to the set of problems $\mathcal{P}$ which (uninterestingly enough) have perfect conditions, and outcomes.
+\end{defn}
+
+
+We can interpret the average-case mathematically terms as the quantifier \emph{for some}. The average-case set of instances of a problem are the ones which cryptographic algorithms require by default. They are the problems which are the most familiar, integer factorization, discrete logarithms, and other problems in which we are only able to assume are hard to solve. We do have hope that our hardness assumptions are still reasonable and these lie in two sets of problems for non-deterministic algorithms.
+
+\begin{defn}{Average-case} 
+    For some negligible set of random instances, the problem $\mathcal{P}$ may not be hard to solve. 
+\end{defn}
+
+
+The worst-case can be defined as the contrapositive of the average-case, which changes the interpretation in a similar way, as the quantifier \emph{for any}, or \emph{for all}, namely:
+
+\begin{defn}{Worst-case}
+    A problem $\mathcal{P}$ is hard to solve (\emph{intractible})\footnote{Tractible: (first known usage 1502) meaning \textit{easily managed}. In contrast, intractible (earliest usage 1545) means difficult to manage. In mathematics, refers to a problem which easily lends itself to solution. Computer Science: A problem which can be solved algorithmically, usually in polynomial time. \todo[inline]{How do you cite Wikitionary?}} in the worst-case, for any positve set of random instances.
+\end{defn}
+
+
+
+The following table compares the differences in definition of average and worst-case hardness assumptions.
+
+
+\begin{table}
+\begin{center}
+\begin{tabularx}{300pt}{|X|X|} \hline
+    \textbf{Average-case} & \textbf{Worst-case} \\ \hline
+    $P \rightarrow Q$ & $\sim Q \rightarrow \sim P$ \\ \hline
+    For some negligible set of random instances, $\mathcal{P}$ may be easy to solve. & $\mathcal{P}$ is hard to solve, for a set of positive random instances. \\ \hline
+    \emph{`Typical'} behavior & \emph{`Rare'} behavior \\ \hline
+    \emph{for some} & \emph{for all} \\ \hline
+\end{tabularx}
+\caption{\textit{\small{Average vs. Worst Case Comparisons}}}
+\label{tb: classvquantaavgworsecon}
+\end{center}
+\end{table}    
+    
+
+\begin{summ}
+    Negligible set means that the size of the set is virtually zero. 
+    
+    This implies that for some positive set of random instances we have a probability which is virtually 1 for the complement.
+\end{summ}
+
+
+
+The definition of worst-case as discussed in lattice-based cryptography is quite different than the traditional form used in the field of Theoretical Computer Science (TCS). For most applications in cryptography the worst-case was not very useful at all, the worst-case simply meant that there existed hard to solve instances of a problem which applied under the worst-case solvability constraints. In fact, many problems which would seem to be hard to solve in the worst-case instances, would ironically turn out to be easily solvable on the average. This would often be true in cryptography, where secret keys would produce instances with added structure \cite{Pei2015}.  
+
+
+For the most part, applied cryptographers did not need to worry too much about worst-case instances of problems. One might run a quick analysis of these instances to see if any vulnerabilities could be spotted, and perhaps eliminated, but overall they were ignored (sometimes mocked, particularly by applied students poking at theoretical ones). 
+
+
+
+
+
+
+
+
+
+
+
+
+
+    

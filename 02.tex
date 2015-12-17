@@ -1,0 +1,283 @@
+\section{Notation}
+
+Before beginning please note the following notation as it will be used throughout the text.
+
+The real coordinate space, or Euclidean space is denoted $\mathbb{R}^{n}$, and $\mathbb{Z}$ denotes the group of integers under addition.
+The usual variables denote real numbers $x$ and $y$, if bold $\mathbf{x}$ denotes a column vectors, and $\mathbf{x}^{t}$, its transpose is a row vector.  Complex variables are $z$ and in certain specific contexts $\omega$. 
+
+Matrices are denoted with uppercase letters $A$ or $B$.
+
+The variables $p$ and $q$ are positive integers. Let $q$ be a positive integer then group of integers modulo $q$, is denoted $\mathbb{Z}_{q}$.
+
+
+\section{Another Note}
+
+
+It may be worth noting that although cryptography can be approached from a pure mathematical perspective, (indeed the definitions for security themselves stated in terms most mathematics undergraduates would find familiar and comfortable) it is still an applied topic, where certain rules, norms should be expected when attempting to move into this small, but closely knit community of applied and theoretical cryptographers. 
+
+
+It is also worth noticing that the divide between civilian and agency cryptographers has of late widened. Previously, the cryptographers employed by governmental agencies both in the US and several other countries such as the UK, and New Zealand were more or less concerned with the same outcomes. Attitudes for the most part remained cooperative due to an mutual goal of reducing threats and increasing the security of all systems. 
+
+
+However, recent developments have lead to feelings mistrust and irritation towards these agencies. In particular, the revelation that some governmental agencies may have intentionally subverted cryptographic standards e.g., encouraging the NIST to adopt and promote a `random' number generator for dual elliptic curve cryptography, which turned out not only far from random but known to be significantly flawed many times over\cite{Jgr2015} \cite{Sgr2013} \cite{Sch2007}. 
+
+
+It is enough regardless of ones stance on mass surveillance and related issues to feel a certain amount of mistrust towards a party who suddenly adds a non-arbitrary amount of added work to an already overflowing stack. his is similar in a sense, to cleaning up ones yard at the same time as your neighbor and upon returning from the backyard believing you have finished, finding the same neighbor has simply blown all their leaves into your yard. Uncomfortable as it may be to deal with political untidiness of this sort it is better that you seek out information and decide for yourself which side of a table you are comfortable sitting than to be surprised later. This being said you are once again reminded that cryptography is concerned with the transmission, verification, and overall security of arbitrary date. Be it your grandmothers cookie recipe or a bank statement the outcome of a certain scheme should be the same. The end goal is an increase in security not an increase to insecurity, political intrigue, or any other uncommon quantity; put the spy movies down\footnote{Avoid using the word 'cyber' at all costs.}. 
+
+
+\section{Introductory Cryptographic Terminology and Notation}
+
+
+Before we begin constructing a scheme we need to know which type of channel will be used to transmit the communications. Not all schemes will be appropriate for a particular channel. Choosing appropriately for the users and channel instead attempting to force a scheme to fit an unsuited one will not only save a lot of wasted effort during implementation it also ensures that an appropriate basis for security is in place prior to the implementation. 
+
+
+\subsection{Basic Communications Channels}
+
+
+\begin{defn}{Confidential Channel. }
+    A \gls{confidential channel} enables communication that is resistant to interception.
+\end{defn}
+
+
+\medskip
+\begin{defn}{Authentic Channel. }
+    An \gls{authentic channel} allows communication which resists alterations by unauthorized users.
+\end{defn}
+
+
+\medskip
+\begin{defn}{Secure Channel. }
+    A \gls{secure channel} enables communication which may resist both interception, and alteration by unauthorized users.
+\end{defn}
+
+There are many more different types of channels which are of cryptographic and information theoretic interest. The above channels provide a pretty good starting point to serve as our frame of reference.
+
+
+
+\subsection{Asymmetric and Symmetric Key Schemes}
+
+Modern cryptographic schemes can generally be divided into two classes: \gls{asymmetric-key} schemes and \gls{symmetric-key} schemes. 
+
+\Gls{symmetric-key} schemes involve the use of only one key, used by all communicating parties called a \emph{\gls{shared secret}}. 
+In contrast, \gls{asymmetric-key} schemes make use of one key pair for each user, composed of a \gls{secret key} and a \gls{public key}; in general they tend to be more efficient than asymmetric schemes but have the disadvantage of requiring users to have an a priori knowledge of the need to communicate. Specifically, symmetric-key schemes require that secret keys be distributed over a \gls{secure channel}\footnote{In real world applications there is no such thing as a secure channel.}. 
+
+Symmetric key distribution schemes (when used alone) are not typically appropriate for networked environments, which depending on context may constitute an \gls{insecure channel}. 
+
+\begin{rem}
+    It is worth explicitly stating that any type of cryptosystem regardless of the number of keys or method of generating keys becomes insecure (in whole or in part) when a secret key is compromised. 
+    
+    In reality even if the channel chosen is theoretically secure\footnote{The given definitions for channels are extended under the subfield of \textit{Universal Decomposability}; typically the definitions are given the prefix `ideal', followed by the channel name in order to distinguish from these more general forms.}, in application the security will be probabilistic with a value which is not necessarily negligibly small. 
+\end{rem}
+
+\smallskip
+
+\begin{rem}
+	Another problem is there is no system in any channel that allows a user to know if a message, (sent or received) has reached the user securely. In other words, you may have taken all possible measures to ensure your communication was not intercepted, copied, opened, etc. but despite all these safeguards there is no way to check to make sure the message traversed from user to sender without any such breach.
+\end{rem}
+
+\bigskip
+
+In contrast, public-key cryptography is an asymmetric-key class of cryptosystems which does not require any foreknowledge of the need to communicate between users, nor does it require a secure channel. \acrfull{pkc} solves the problem of how to enable secure communication between two people who have never met over insecure channels. 
+
+A public-key scheme makes use of one key pair per user, consisting of a private (secret) key and a public key. Users wishing to communicate make use of public keys to encrypt messages; and private keys to decrypt messages. 
+
+
+\textbf{In general \acrshort{pkc} depends on the following assumptions:}
+\smallskip
+
+\begin{asu}
+	In the forward direction, we assume there exists a one-way function which is `easy' to compute.
+\end{asu}
+\medskip
+
+\begin{asu}
+	In the reverse direction, we assume that the same function is `hard' to invert. 
+\end{asu}
+\vspace{.25in}
+\begin{figure}[H]
+    \begin{center}
+        \input{pkcdia.tex}
+        \caption{Oneway function and trapdoor}
+        \label{dia:pkc}
+    \end{center}
+\end{figure}
+
+
+\subsection{Complexity and Cryptography}
+
+Informally, we say that a function is `easy' to compute if an algorithm can provide a solution in a relatively short amount of time \footnote{Reasonably short meaning well before the heat death of the universe. More than reasonable resources suggests allowing amounts upto and possibly including the heat death of the universe; possibly several times.}. Similarly, we refer to a function as being `hard' to compute if it cannot provide a solution in a more than reasonable amount of time. The ease or difficulty in finding solutions to a given function is the main focus of computational complexity. 
+
+
+In cryptography the \gls{hardness} involved in finding a solution for a given function quantifies the chance of finding a solution to an assumed or known hard problem. That is, hardness quantifies the chance an adversary has of finding a solution to the mathematical problem a cryptosystem is based upon; finding a solution may give rise to the recovery of a secret key, or decryption of a message (without recovering a key). 
+
+
+The common assumptions attributed to an adversary are as follows:
+
+\begin{asu}
+	The adversary is in possession of (or has access to) slightly more than a reasonable (but still finite and non-quantum) amount of computational resources.
+\end{asu}
+
+
+
+\begin{asu}
+	If the adversarial system (as described above) provides a solution to the problem serving as a basis for security of the target system, it does so by applying a probabilistic, polynomial-time, algorithm. 
+\end{asu}
+
+ 
+
+\subsection{Formal Definitions of Asymmetric \& Symmetric Cryptography} 
+
+The concepts of symmetric and asymmetric cryptographic-key schemes are given below independently. A typical cryptosystem mixes more than one type of cryptographic primitive, depending on the functions required. 
+
+Both asymmetric and symmetric key schemes discussed here are assumed to be classical cryptosystems. By `classical' we mean the systems are not quantum computers (or algorithms), although they may be parallel clusters. 
+
+
+
+\subsubsection{Symmetric-key Cryptography} 
+
+In canonical symmetric-key schemes only one key is generated for both the encryption and decryption algorithms. Symmetric-keys must therefore be exchanged over secure channels where both communicating parties have agreed in advance to the method of encryption and have decided upon a shared secret key. 
+
+
+Formally, we say the two parties are in possession of a \emph{shared secret} and each party is mutually responsible for the maintenance of this secret.
+
+Drawbacks of symmetric key schemes include the use of a secure channel, and a single shared secret key. 
+
+
+\large \textbf{We define a symmetric-key scheme as follows:}
+\medskip
+
+\begin{defn}{Keyspace. } 
+	Let $\mathbf{\mathcal{K}}$ be the set of all possible keys $k$  generated by a key generation function $\mathbf{Gen}$, called the \emph{keyspace}.
+\end{defn}
+
+\medskip
+
+\begin{defn}{Key Generation Function. }
+	The key generation algorithm $\mathbf{Gen}$ is a probabilistic function which uses an appropriately chosen uniform distribution to generate the elements of the keyspace $\mathcal{K}$.
+\end{defn}
+
+\medskip
+The key generation algorithm $\mathbf{Gen}$, has a uniform distribution from which key elements $k$ must be chosen randomly.
+\medskip
+
+\begin{defn}{Message Space. }
+	The \gls{message space}, denoted $\mathbf{\mathcal{M}}$, is the set of all possible messages $m$, also called the \emph{plaintext space}.
+\end{defn}
+\medskip
+
+
+\begin{defn}{Encryption Function. }
+	The encryption function $\mathbf{Enc}$ takes a message $m$ as input, and uses the secret key $k$ to produce a ciphertext $c$.
+\end{defn}
+
+\medskip
+
+\begin{defn}{Ciphertext Space. }
+	The set of all possible ciphertexts (or the ciphertext space) is denoted $\mathbf{\mathcal{C}}$, is defined by the pair of spaces $\mathbf{(\mathcal{K}, \mathcal{M})}$. 
+\end{defn}
+
+\medskip
+
+\begin{defn}{Decryption Function. }
+	The decryption function $\mathbf{Dec}$, takes a ciphertext $c$ as input and uses the secret key $k$ to recover the message $m$. 
+\end{defn}
+
+\bigskip
+
+
+\subsubsubsection{Symmetric Key Cryptosystem}
+
+\medskip
+
+Taking all components together, we have a typical \emph{symmetric-key} cryptosystem. We use cryptography's favorite archetypes Alice and Bob, and their eavesdropper Eve to enact the scheme.
+
+
+\medskip
+
+A symmetric-key cryptosystem is given by a set of algorithms $\mathbf{(Gen, Enc, Dec)}$ and the message space $\mathcal{M}$.
+
+
+Alice and Bob make use of the cryptosystem as follows: 
+
+First, Alice and Bob use $\mathbf{Gen}$ to produce a shared secret key $k$.
+
+Whenever Bob wishes to send a message $m$ to Alice (or Alice to Bob) he inputs the pair $(m,k)$ into $\mathbf{Enc}$ and receives a ciphertext of his message $c$.
+
+\[c \mathrel{\mathop:}= Enc_{k}(m)\]
+
+When Alice receives the ciphertext $c$ from Bob she inputs the pair $(c,k)$ into the decryption function $\mathbf{Dec}$ and retrieves the plaintext message $m$.
+
+\[Dec_{k}(c) \mathrel{\mathop:}= m.\]
+
+
+
+To ensure the correctness of a cryptosystem, we show there exists a bijection between the one-way function and the trapdoor function.
+
+Meaning composition of the functions $\mathbf{Enc}$ and $\mathbf{Dec}$ will return the same outputs for a given input, for every message key pair $(k,m)$ where $k \in \mathcal{K}$ and $m \in \mathcal{M}$.
+
+\smallskip
+
+That is, the relation $\mathbf{Enc} : \mathcal{M} \times \mathcal{K} \rightarrow \mathcal{C}$ is a mapping of $m \mapsto c$ for every $c \in \mathcal{C}$, 
+if and only if $\mathbf{Dec}: \mathcal{K} \times \mathcal{C} \rightarrow \mathcal{M}$ is also a relation mapping such that $c \mapsto m$ for every $m \in \mathcal{M}$. 
+
+Thus we have shown for our toy\footnote{And general too!} symmetric-key cryptosystem the relations $\mathbf{Enc}$ and $\mathbf{Dec}$ are closed under composition, and return the expected outputs for all $m$.
+\[Dec_{k}(Enc_{k}(m)) = m\]
+
+
+The composition of the $\mathbf{Enc}$ and $\mathbf{Dec}$ functions produces in one direction the original message, and in the other direction we get the ciphertext,
+\[Enc_{k}(Dec_{k}(m)) = c.\]
+Therefore we have confirmed the $\mathbf{Enc}$ function has an inverse (is reversible), likewise for the $\mathbf{Dec}$ function. 
+
+
+
+
+\bigskip
+
+\subsubsection{Asymmetric Key Cryptography}
+
+
+In contrast, asymmetric-key schemes are determined by two sets of keys one for each party. Each set consists of a \emph{private key}, $s_{k}$ known only to the owner and a \emph{public key}, $p_{k}$ which can be widely distributed.
+
+Asymmetric-key cryptography form the basis for all Public Key Cryptosystems (PKC) such as RSA, and the Diffie-Hellman protocol.
+
+A public-key uses a \gls{one-way function} as its public key, $p_{k}$; this function is easy to compute but hard to invert and is available publicly for use as an encryption method for the key owner. 
+
+A second key called the private key,  $s_{k}$ is known only to the key owner; this key is a `\gls{trapdoor function}', which provides some additional information allowing the inverse of the one-way function to be more easily computed. 
+
+\smallskip
+
+\begin{nt}
+The \gls{one-way function assumption} is an open question in computability and complexity theory. It is common to make the assumption that one-way functions exist, in order to create new cryptosystems. 
+\end{nt}
+
+\medskip
+
+
+\begin{defn}{Key Element. } 
+	Let $s_{k}$ be a private key corresponding to a $p_{k}$. 
+A key element of a public-key scheme is then defined as follows:
+\[k = (s_{k},p_{k}). \] 
+\end{defn}
+
+\smallskip
+
+The definitions for the keyspace $\mathcal{K}$, message space $\mathcal{M}$, and ciphertext space $\mathcal{C}$ are then defined in the same way as symmetric-key schemes. However, the definition of the cryptosystem is slightly different.
+
+\bigskip
+
+
+\begin{defn}{Asymetric-key Cryptosystem. }
+	An asymmetric-key cryptosystem is given by a set of algorithms $\mathbf{(Gen, Enc, Dec)}$ along with the message space $\mathcal{M}$, keyspace, $\mathcal{K}$, and ciphertext space $\mathcal{C}$\footnote{It would seem at first glance that asymmetric and symmetric cryptosystems are isolated methods of encryption. However, symmetric encryption is well-suited for the task of assisting asymmetric key schemes not only for efficiency purposes but also in the role of key management.}.
+
+Let $k = (s_{k},p_{k})$ be a key element such that $s_{k}$ is an element of the set of all possible keys $\mathcal{K}$, such that $s_{k}$ is chosen randomly from a space which generated in a uniform manner from an appropriate distribution. 
+
+
+For al $p_{k}\in \mathcal{K}$, there exists $\mathbf{Enc}_{p_{k}}(\mathcal{M,C})$, where $\mathcal{M} \times \mathcal{K} \rightarrow \mathcal{C}.$
+
+For all $p_{s}\in \mathcal{K}$, there exists $\mathbf{Dec}_{p_{s}}(\mathcal{C,M})$, where $\mathcal{K} \times \mathcal{C} \rightarrow \mathcal{M}.$
+
+If $k \in \mathcal{K}$, then the composition $\mathbf{Dec}_{p_{k}}(\mathbf{Enc}_{p_{s}}) = m$, for all $m \in \mathcal{M}$.
+
+\end{defn}
+
+

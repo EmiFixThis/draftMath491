@@ -1,0 +1,26 @@
+% TIKZ DIAGRAM: Oneway function with Trapdoor
+
+% Define block styles
+\tikzstyle{block} = [rectangle, draw, fill=blue!20, 
+    text width=5em, text centered, rounded corners, minimum height=3em]
+\tikzstyle{line} = [draw, -latex']
+
+    
+\begin{tikzpicture}
+    % Place nodes
+    \node [block] at (-2,0) (dom) {$Dom(f)$};
+    %\node [block, right of=dom] (enc) {$Enc(m)=c$};
+    %\node [block, right of=enc] (dec) {$Dec(c)=m$};
+    \node [block] at (0,-2) (trap) {trapdoor  $f^{-1}$};
+    \node [block] at (2,0) (co) {$CoDom(f)$};
+    % Draw edges
+    \path [line](-1,.2) -- node[above]{$f$ (easy)}(1,.2);
+    \path [line](1,-.4) -- node[below]{$f^{-1}$ (hard)}(-1,-.4);
+   	\path[line,dashed] (co) -- (2,-2) node[right]{easy} -- (trap);
+    \path[line,dashed](trap) -- (-2,-2) node[left]{easy} -- (dom);
+   % \path [line,dashed] (dom) -- (trap);
+   % \path [line,dashed] (trap) -- (dec);
+    %\path [line,dashed] (enc) -- (pt);
+    %\path [line,dashed] (enc) |- (trap);
+\end{tikzpicture}
+
